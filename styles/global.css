@@ -1,3 +1,11 @@
+@import url("https://use.typekit.net/boh7gew.css");
+
+:root {
+  --cosmic-latte: #FFF6E7;
+  --maize: #F7C64E;
+  --temptress: #3C1F1B;
+}
+
 html,
 body {
   padding: 0;
@@ -15,6 +23,7 @@ body {
     Droid Sans,
     Helvetica Neue,
     sans-serif;
+  background-color: var(--cosmic-latte);
 }
 
 a {
@@ -26,7 +35,9 @@ a {
   box-sizing: border-box;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+.abolitionRegular {
+  font-family: "abolition", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
+
