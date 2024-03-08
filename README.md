@@ -1,1 +1,4 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+# The Movement Undercommons Site
+
+#### Design by [FAILSPACE](https://failspacenyc.com/)
+#### Developed by [Jack Rifkin](https://www.linkedin.com/in/jackrifkin/)
