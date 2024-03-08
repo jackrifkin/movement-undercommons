@@ -1,7 +1,7 @@
-import MovementUndercommons from '.'
-import './../styles/global.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import MovementUndercommons from ".";
+import "./../styles/global.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function App() {
-    return <MovementUndercommons />
+  return <MovementUndercommons />;
 }

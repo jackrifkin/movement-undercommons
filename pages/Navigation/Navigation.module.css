@@ -1,62 +1,71 @@
 .container {
-    height: 140px;
-    background-color: var(--temptress);
-    clip-path: polygon(0 0, 100% 0, 100% 140px, 0 140px);
+  height: 140px;
+  background-color: var(--temptress);
+  clip-path: polygon(0 0, 100% 0, 100% 140px, 0 140px);
 }
 
 .flexContainer {
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
-    height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .subFlexContainer {
-    position: absolute;
-    left: 0;
-    display: flex;
-    justify-content: end;
-    height: 140px;
-    width: 100%;
-    background-color: var(--maize);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    z-index: 11;
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: end;
+  height: 140px;
+  width: 100%;
+  background-color: var(--maize);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  z-index: 11;
 }
 
-.wordmarkContainer {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.wordmarkContainer,
+.wordmarkContainerMobile {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.menuTextContainer {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    padding-bottom: 7.5px;
-    margin-right: 50px;
+.wordmarkContainerMobile {
+  margin-left: 10px;
+  padding-bottom: 20px;
+  justify-content: end;
+  display: flex;
+}
+
+.menuLabelContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-bottom: 7.5px;
 }
 
 .subMenuTextContainer {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    padding-bottom: 7.5px;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-bottom: 7.5px;
+  justify-content: space-between;
 }
 
-.menu {
-    color: var(--cosmic-latte);
+.menuLabel {
+  color: var(--cosmic-latte);
+  font-size: xx-large;
+  margin-right: 50px;
 }
 
 .subMenuText {
-    color: var(--temptress);
-    font-size: xx-large;
-    text-decoration: none;
+  color: var(--temptress);
+  font-size: xx-large;
+  text-decoration: none;
 }
 
 .subMenuText:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }

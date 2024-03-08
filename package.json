@@ -10,9 +10,17 @@
     "bootstrap": "^5.3.3",
     "next": "latest",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-responsive": "^9.0.2"
   },
   "engines": {
     "node": ">=18"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.34.0",
+    "prettier": "^3.2.5",
+    "prettier-config-standard": "^7.0.0"
   }
 }
