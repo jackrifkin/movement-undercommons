@@ -8,7 +8,7 @@ const Wordmark = ({ color, style, width, height }) => {
       xmlns="http://www.w3.org/2000/svg"
       style={style}
     >
-      <g clip-path="url(#clip0_180_1995)" style={{ flexShrink: "1" }}>
+      <g clipPath="url(#clip0_180_1995)" style={{ flexShrink: "1" }}>
         <path
           d="M27.6999 11.6151V110.343H13.6924V11.6151H0.400391V0H40.9776V11.6151H27.6999Z"
           fill={color}

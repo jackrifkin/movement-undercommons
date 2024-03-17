@@ -15,7 +15,7 @@
   position: absolute;
   left: 0;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   height: 140px;
   width: 100%;
   background-color: var(--maize);
@@ -34,7 +34,7 @@
 .wordmarkContainerMobile {
   margin-left: 10px;
   padding-bottom: 20px;
-  justify-content: end;
+  justify-content: flex-end;
   display: flex;
 }
 
@@ -42,7 +42,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   padding-bottom: 7.5px;
 }
 

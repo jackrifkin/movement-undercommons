@@ -1,12 +1,7 @@
-import { useRouter } from "next/router";
-import Navigation from "./Navigation";
+import styles from './Home.module.css';
 
-export default function MovementUndercommons() {
-  const router = useRouter();
-
-  return (
-    <div>
-      <Navigation />
-    </div>
-  );
+export default function Home() {
+    return (
+        <p>Home</p>
+    )
 }

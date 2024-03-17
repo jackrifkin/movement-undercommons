@@ -29,11 +29,11 @@ const SubMenu = ({
         style={{ margin: "0 50px", width: "30%" }}
       >
         <div className={styles.subMenuTextContainer}>
-          <Link href="#" className={`${styles.subMenuText} abolitionRegular`}>
+          <Link href="/Gallery" className={`${styles.subMenuText} abolitionRegular`}>
             Portraits
           </Link>
           <Link
-            href="#"
+            href="/Process"
             className={`${styles.subMenuText} abolitionRegular`}
             style={{ paddingRight: "20px" }}
           >
@@ -51,11 +51,13 @@ const SubMenu = ({
           flex: "1",
         }}
       >
-        <Wordmark
-          color={"var(--temptress)"}
-          width={"500px"}
-          height={"78.125px"}
-        />
+        <Link href="/">
+          <Wordmark
+            color={"var(--temptress)"}
+            width={"500px"}
+            height={"78.125px"}
+          />
+        </Link>
       </div>
     </div>
   );
@@ -79,28 +81,34 @@ export default function Navigation() {
     <div className={styles.container}>
       <div className={styles.flexContainer} onMouseEnter={handleMouseEnter}>
         <div className={`${styles.wordmarkContainer} d-none d-md-flex`}>
-          <Wordmark
-            color={"var(--maize)"}
-            width={"500px"}
-            height={"78.125px"}
-            style={{ zIndex: "10" }}
-          />
+          <Link href="/">
+            <Wordmark
+              color={"var(--maize)"}
+              width={"500px"}
+              height={"78.125px"}
+              style={{ zIndex: "10" }}
+            />
+          </Link>
         </div>
         <div className={`${styles.wordmarkContainerMobile} d-md-none`}>
           {isXsScreen ? (
-            <Wordmark
-              color={"var(--maize)"}
-              width={isGalaxyFold ? "200px" : "275px"}
-              height={isGalaxyFold ? "31.25px" : "42.96875px"}
-              style={{ zIndex: "10" }}
-            />
+            <Link href="/">
+              <Wordmark
+                color={"var(--maize)"}
+                width={isGalaxyFold ? "200px" : "275px"}
+                height={isGalaxyFold ? "31.25px" : "42.96875px"}
+                style={{ zIndex: "10" }}
+              />
+            </Link>
           ) : (
-            <Wordmark
-              color={"var(--maize)"}
-              width={"350px"}
-              height={"56.6875px"}
-              style={{ zIndex: "10" }}
-            />
+            <Link href="/">
+              <Wordmark
+                color={"var(--maize)"}
+                width={"350px"}
+                height={"56.6875px"}
+                style={{ zIndex: "10" }}
+              />
+            </Link>
           )}
         </div>
         <div className={styles.menuLabelContainer}>
