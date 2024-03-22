@@ -1,6 +1,6 @@
 import "./../styles/global.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Layout from "./Layout";
+import Layout from "./Components/Layout";
 
 export default function App({ Component, pageProps }) {
   return (

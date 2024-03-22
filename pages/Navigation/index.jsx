@@ -11,8 +11,8 @@ const SubMenu = ({
   setWordmarkDisplacement,
 }) => {
   const handleMouseLeave = () => {
-    setContainerDisplacement(140);
-    setWordmarkDisplacement(-140);
+    setContainerDisplacement(130);
+    setWordmarkDisplacement(-130);
   };
 
   return (
@@ -64,8 +64,8 @@ const SubMenu = ({
 };
 
 export default function Navigation() {
-  const [containerDisplacement, setContainerDisplacement] = useState(140);
-  const [wordmarkDisplacement, setWordmarkDisplacement] = useState(-140);
+  const [containerDisplacement, setContainerDisplacement] = useState(130);
+  const [wordmarkDisplacement, setWordmarkDisplacement] = useState(-130);
 
   const isXsScreen = useMediaQuery({ maxWidth: 500 });
   const isGalaxyFold = useMediaQuery({ maxWidth: 340 });

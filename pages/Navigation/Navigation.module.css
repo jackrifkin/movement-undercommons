@@ -1,7 +1,7 @@
 .container {
-  height: 140px;
+  height: 130px;
   background-color: var(--temptress);
-  clip-path: polygon(0 0, 100% 0, 100% 140px, 0 140px);
+  clip-path: polygon(0 0, 100% 0, 100% 130px, 0 130px);
 }
 
 .flexContainer {
@@ -16,7 +16,7 @@
   left: 0;
   display: flex;
   justify-content: flex-end;
-  height: 140px;
+  height: 130px;
   width: 100%;
   background-color: var(--maize);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
