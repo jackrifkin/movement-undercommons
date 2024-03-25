@@ -1,6 +1,50 @@
 import HeaderBar from '../Components/HeaderBar'
 import styles from './Process.module.css'
 
+const placeholderPublications = [
+    {
+        title: "TITLE OF PUBLICATION",
+        description: "Ab quia pariatur sed consequuntur recusandae sit velit perspiciatis? by Author Name"
+    },
+    {
+        title: "ANOTHER PUBLICATION",
+        description: "Ab quia pariatur sed consequuntur recusandae sit velit perspiciatis? by Author Name"
+    },
+    {
+        title: "PUBLICATION #3",
+        description: "Ab quia pariatur sed consequuntur recusandae sit velit perspiciatis? by Author Name"
+    },
+    {
+        title: "YET ANOTHER PUBLICATION",
+        description: "Ab quia pariatur sed consequuntur recusandae sit velit perspiciatis? by Author Name"
+    },
+    {
+        title: "THIS IS ALSO A PUBLICATION",
+        description: "Ab quia pariatur sed consequuntur recusandae sit velit perspiciatis? by Author Name"
+    },
+    {
+        title: "VERY VERY VERY VERY VERY VERY VERY LOOOOOOOOOOONG TITLE",
+        description: "Ab quia pariatur sed consequuntur recusandae sit velit perspiciatis? by Author Name"
+    },
+    {
+        title: "SHORT TITLE",
+        description: "Ab quia pariatur sed consequuntur recusandae sit velit perspiciatis? by Author Name"
+    }
+];
+
+const Publication = ({
+    title,
+    description,
+    ref
+}) => {
+    return (
+        <div style={{ marginBottom: '30px' }}>
+            <h3 className='abolitionRegular' style={{ marginBottom: '0' }}>{title}</h3>
+            <p>{description}</p>
+        </div>
+    )
+}
+
 export default function Process() {
     return (
         <>
@@ -114,24 +158,24 @@ export default function Process() {
                         <div className={`altText`} style={{ width: '250px' }}>
                             <p>
                                 a. The Ohio State University, Advanced Center for Computation and Design [ACCAD] - Motion Capture Lab - Data and Downloads. "Open Motion Data Project”
-                                <br/><br/>
+                                <br /><br />
                                 b. Motion Bank. http://motionlab.deakin.edu.au/dr-scott- delahunta/, Centre for Dance Research, Coventry University (UK)
-                                <br/><br/>
+                                <br /><br />
                                 c. Carnegie Mellon University, Motion Capture Database, http://mocap.cs.cmu.edu/
-                                <br/><br/>
+                                <br /><br />
                                 d. https://www.irishtimes.com/news/science/technology- pros-serve-tennis-ace-1.945491
-                                <br/><br/>
+                                <br /><br />
                                 e. https://pdfs.semanticscholar.org/67d7/7d699a384a 4a6912685ed579928daf4ad416.pdf
-                                <br/><br/>
+                                <br /><br />
                                 f. http://ieeexplore.ieee.org/document/6127084/
-                                <br/><br/>
+                                <br /><br />
                                 g. Project Tango -https://get.google.com/tango/ - for Mobile Based Kinetc
-                                <br/><br/>
+                                <br /><br />
                                 h. Fit3d and others offer portable 3d scanning
                                 - https://www.fit3d.com
-                                <br/><br/>
+                                <br /><br />
                                 i. Daniel Vlasic, Rolf Adelsberger, Giovanni Vannucci, John Barnwell, Markus Gross, Wojciech  Matusik, and Jovan Popović. 2007. Practical motion capture in everyday surroundings. ACM Trans.  Graph. 26, 3, Article 35 (July 2007). DOI:https://doi.org/10.1145/1276377.1276421
-                                <br/><br/>
+                                <br /><br />
                                 j. Ronit Slyper and Jessica K. Hodgins. 2008. Action capture with accelerometers. In Proceedings of  the 2008 ACM SIGGRAPH/Eurographics Symposium on Computer Animation (SCA '08).  Eurographics Association, Aire-la-Ville, Switzerland, Switzerland, 193-199.
                             </p>
                         </div>
@@ -139,10 +183,37 @@ export default function Process() {
                 </div>
 
             </div>
-            <HeaderBar text="PUBLICATIONS" backgroundColors={["var(--burnt-orange)"]} textColors={["var(--light-blue)"]} underlineColors={["var(--dark-teal)"]} alignTextLeft={true}/>
+
+            <HeaderBar text="PUBLICATIONS" backgroundColors={["var(--burnt-orange)"]} textColors={["var(--light-blue)"]} underlineColors={["var(--dark-teal)"]} alignTextLeft={true} />
+
             <div className={styles.contentContainer}>
-                <h1>TITLE OF PUBLICATION</h1><br/>
-                <p>Ab quia pariatur sed consequuntur recusandae sit velit perspiciatis?<br/>by Author Name</p>
+                {/* <div className='d-flex justify-content-between flex-wrap'>
+                    {placeholderPublications.map((publication, index) => {
+                        return (
+                            <div style={{ ...{ width: '50%' }, ...((index % 2 === 0) ? { paddingRight: '25px' } : { paddingRight: '0' }) }} className='d-flex justify-content-start flex-column'>
+                                <Publication title={publication.title} description={publication.description} />
+                            </div>
+                        )
+                    })}
+                </div> */}
+
+                <div className='row'>
+                    <div className='col'>
+                        {placeholderPublications.slice(0, Math.ceil(placeholderPublications.length / 2)).map((publication) => {
+                            return (
+                                <Publication title={publication.title} description={publication.description} />
+                            )
+                        })}
+                    </div>
+                    <div className='col-2' />
+                    <div className='col'>
+                        {placeholderPublications.slice(Math.ceil(placeholderPublications.length / 2)).map((publication) => {
+                            return (
+                                <Publication title={publication.title} description={publication.description} />
+                            )
+                        })}
+                    </div>
+                </div>
             </div>
         </>
     )
