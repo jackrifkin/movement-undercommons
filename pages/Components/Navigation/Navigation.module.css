@@ -11,7 +11,7 @@
   height: 100%;
 }
 
-.subFlexContainer {
+.hoverFlexContainer {
   position: absolute;
   left: 0;
   display: flex;
@@ -46,7 +46,7 @@
   padding-bottom: 7.5px;
 }
 
-.subMenuTextContainer {
+.hoverMenuTextContainer {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -60,12 +60,12 @@
   margin-right: 50px;
 }
 
-.subMenuText {
+.hoverMenuText {
   color: var(--temptress);
   font-size: xx-large;
   text-decoration: none;
 }
 
-.subMenuText:hover {
+.hoverMenuText:hover {
   text-decoration: underline;
 }

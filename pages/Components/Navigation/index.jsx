@@ -4,7 +4,7 @@ import Wordmark from "../Wordmark";
 import Link from "next/link";
 import { useMediaQuery } from "react-responsive";
 
-const SubMenu = ({
+const HoverMenu = ({
   containerDisplacement,
   setContainerDisplacement,
   wordmarkDisplacement,
@@ -17,7 +17,7 @@ const SubMenu = ({
 
   return (
     <div
-      className={`${styles.subFlexContainer} d-none d-md-flex`}
+      className={`${styles.hoverFlexContainer} d-none d-md-flex`}
       style={{
         top: `${containerDisplacement}px`,
         transition: "top 0.45s ease-in-out",
@@ -28,13 +28,16 @@ const SubMenu = ({
         className="d-flex flex-column justify-content-end align-items-end"
         style={{ margin: "0 50px", width: "30%" }}
       >
-        <div className={styles.subMenuTextContainer}>
-          <Link href="/Gallery" className={`${styles.subMenuText} abolitionRegular`}>
+        <div className={styles.hoverMenuTextContainer}>
+          <Link
+            href="/Gallery"
+            className={`${styles.hoverMenuText} abolitionRegular`}
+          >
             Portraits
           </Link>
           <Link
             href="/Process"
-            className={`${styles.subMenuText} abolitionRegular`}
+            className={`${styles.hoverMenuText} abolitionRegular`}
             style={{ paddingRight: "20px" }}
           >
             Process
@@ -128,7 +131,7 @@ export default function Navigation() {
           ></div>
         </div>
       </div>
-      <SubMenu
+      <HoverMenu
         containerDisplacement={containerDisplacement}
         setContainerDisplacement={setContainerDisplacement}
         wordmarkDisplacement={wordmarkDisplacement}

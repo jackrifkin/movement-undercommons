@@ -1,13 +1,13 @@
 .contentContainer {
-    padding: 50px 40px;
-    background-color: var(--cosmic-latte);
+  padding: 50px 40px;
+  background-color: var(--cosmic-latte);
 }
 
 .headerText {
-    color: var(--burnt-orange);
-    margin: 0;
+  color: var(--burnt-orange);
+  margin: 0;
 }
 
 .marginTop50 {
-    margin-top: 50px;
+  margin-top: 50px;
 }

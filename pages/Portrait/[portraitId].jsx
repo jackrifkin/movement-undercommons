@@ -1,11 +1,11 @@
-import { useRouter } from 'next/router'
-import styles from './Portrait.module.css'
+import { useRouter } from "next/router";
+import styles from "./Portrait.module.css";
 
 export default function Portrait() {
-    const router = useRouter();
-    const { portraitId } = router.query;
+  const router = useRouter();
+  const { portraitId } = router.query;
 
-    console.log(portraitId)
+  console.log(portraitId);
 
-    return <>Portrait: {portraitId}</>
+  return <>Portrait: {portraitId}</>;
 }

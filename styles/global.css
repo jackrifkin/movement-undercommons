@@ -4,10 +4,13 @@
 :root {
   --cosmic-latte: #fff6e7;
   --maize: #f7c64e;
+  --light-maize: #fcdb8c;
   --temptress: #3c1f1b;
-  --burnt-orange: #A44A0D;
-  --light-blue: #B8D8E0;
+  --burnt-orange: #a44a0d;
+  --light-blue: #b8d8e0;
   --dark-teal: #256155;
+  --lime: #6ce25c;
+  --black-coffee: #403428;
 }
 
 html,

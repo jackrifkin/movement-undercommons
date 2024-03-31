@@ -1,12 +1,14 @@
 .headerBar {
-    height: 120px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    border-bottom: 5px solid;
-    transition: border-color 0.5s ease, background-color 0.5s ease;
+  height: 120px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 5px solid;
+  transition:
+    border-color 0.5s ease,
+    background-color 0.5s ease;
 }
 
 .headerBarText {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
