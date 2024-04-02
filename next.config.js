@@ -1,8 +1,16 @@
 /**
  * @type {import('next').NextConfig}
  */
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
-    output: 'export',
+    basePath: isProd ? '/movement-undercommons' : '',
+    exportPathMap: async function () {
+        return {
+            '/': { page: '/' }, // Example entry point
+            // Add additional paths if needed
+        };
+    },
    
     // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
     // trailingSlash: true,
