@@ -106,7 +106,7 @@ export default function Home() {
           </div>
           <div className={styles.logoContainer} style={{ width: "200px" }}>
             <img
-              src="/NE-arts-logo.png"
+              src="/NE-arts-logo.svg"
               alt="National Endowment for the Arts"
               className={styles.logo}
             />
