@@ -1,21 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./HeaderBar.module.css";
 
 export default function HeaderBar({
   text,
-  backgroundColors,
-  textColors,
-  underlineColors,
+  backgroundColors = [],
+  textColors = [],
+  underlineColors = [],
   link = null,
   alignTextLeft = false,
 }) {
-  const [currentBackgroundColor, setCurrentBackgroundColor] = useState(
-    backgroundColors[0],
-  );
-  const [currentTextColor, setCurrentTextColor] = useState(textColors[0]);
-  const [currentUnderlineColor, setCurrentUnderlineColor] = useState(
-    underlineColors[0],
-  );
+  const [currentBackgroundColor, setCurrentBackgroundColor] = useState('transparent');
+  const [currentTextColor, setCurrentTextColor] = useState('transparent');
+  const [currentUnderlineColor, setCurrentUnderlineColor] = useState('transparent');
 
   const alignRightDivStyle = { justifyContent: "flex-end" };
   const alignLeftDivStyle = { justifyContent: "flex-start" };
@@ -37,6 +33,18 @@ export default function HeaderBar({
       setCurrentUnderlineColor(underlineColors[0]);
     }
   };
+
+  useEffect(() => {
+    if (backgroundColors.length > 0) {
+      setCurrentBackgroundColor(backgroundColors[0])
+    }
+    if (textColors.length > 0) {
+      setCurrentTextColor(textColors[0])
+    }
+    if (underlineColors.length > 0) {
+      setCurrentUnderlineColor(underlineColors[0])
+    }
+  }, []);
 
   return (
     <div
