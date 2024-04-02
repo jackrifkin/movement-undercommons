@@ -59,14 +59,14 @@ export default function Process() {
         textColors={["var(--light-blue)"]}
         underlineColors={["var(--dark-teal)"]}
       />
-      <div className={styles.contentContainer}>
+      <div className={`contentContainer`}>
         <div className="row">
           <div className="col-12 col-md-7">
             <h4 className={`${styles.headerText} abolitionRegular`}>
               MOVEMENT UNDERCOMMONS: TECHNOLOGY AS RESISTANCE | FUTURE ARCHIVES
             </h4>
             <br />
-            <p className={`${styles.bodyText}`}>
+            <p>
               The Movement Undercommons (MU) explores possibilities latent in
               mobile motion capture (mocap) technologies to create a series of
               movement data portraits. The work aims to explore the expressive
@@ -165,7 +165,7 @@ export default function Process() {
         <br />
         <div className={`row`}>
           <div className="col-12 col-md-7">
-            <p className={`${styles.bodyText}`}>
+            <p>
               What is conveyed through our movements? Can we speak of a movement
               identity, some  combination of biological, environmental, and
               embodied cultural experience that distinguishes an individual, or
@@ -269,7 +269,7 @@ export default function Process() {
         <br />
         <div className={`row`}>
           <div className="col-12 col-md-7">
-            <p className={`${styles.bodyText}`}>
+            <p>
               The nature of this work is expressive, qualitative, and
               quantitative; I look to create a ‘kinetic  haiku’ from movement
               data. Along with animating the data as visual material, I compose
@@ -334,7 +334,7 @@ export default function Process() {
         <br />
         <div className={`row`}>
           <div className="col-12 col-md-7">
-            <p className={`${styles.bodyText}`}>
+            <p>
               While photography, video, and audio recording technologies have
               accelerated the means and  ways in which those media are produced
               and innovated, movement-as-digital-object is a relatively new
@@ -423,17 +423,7 @@ export default function Process() {
         alignTextLeft={true}
       />
 
-      <div className={styles.contentContainer}>
-        {/* <div className='d-flex justify-content-between flex-wrap'>
-                    {placeholderPublications.map((publication, index) => {
-                        return (
-                            <div style={{ ...{ width: '50%' }, ...((index % 2 === 0) ? { paddingRight: '25px' } : { paddingRight: '0' }) }} className='d-flex justify-content-start flex-column'>
-                                <Publication title={publication.title} description={publication.description} />
-                            </div>
-                        )
-                    })}
-                </div> */}
-
+      <div className={`contentContainer`}>
         <div className="row">
           <div className="col">
             {placeholderPublications

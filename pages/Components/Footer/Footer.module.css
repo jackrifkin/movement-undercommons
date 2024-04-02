@@ -5,21 +5,21 @@
 }
 
 .mobileContainer {
-    height: 210px;
-    background-color: var(--light-maize);
-    position: relative;
-    border-top: 1px solid var(--temptress);
+  height: 210px;
+  background-color: var(--light-maize);
+  position: relative;
+  border-top: 1px solid var(--temptress);
 }
 
 .mobileLabelsContainer {
-    height: 160px;
-    text-align: center;
-    padding: 15px 0;
+  height: 160px;
+  text-align: center;
+  padding: 15px 0;
 }
 
 .mobileFailspaceContainer {
-    height: 50px;
-    background-color: var(--temptress);
+  height: 50px;
+  background-color: var(--temptress);
 }
 
 .hoverFooterContainer {

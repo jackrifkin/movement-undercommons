@@ -7,7 +7,7 @@ export default function HeaderBar({
   textColors,
   underlineColors,
   link = null,
-  alignTextLeft,
+  alignTextLeft = false,
 }) {
   const [currentBackgroundColor, setCurrentBackgroundColor] = useState(
     backgroundColors[0],
