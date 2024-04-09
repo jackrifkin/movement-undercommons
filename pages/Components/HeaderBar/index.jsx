@@ -9,9 +9,11 @@ export default function HeaderBar({
   link = null,
   alignTextLeft = false,
 }) {
-  const [currentBackgroundColor, setCurrentBackgroundColor] = useState('transparent');
-  const [currentTextColor, setCurrentTextColor] = useState('transparent');
-  const [currentUnderlineColor, setCurrentUnderlineColor] = useState('transparent');
+  const [currentBackgroundColor, setCurrentBackgroundColor] =
+    useState("transparent");
+  const [currentTextColor, setCurrentTextColor] = useState("transparent");
+  const [currentUnderlineColor, setCurrentUnderlineColor] =
+    useState("transparent");
 
   const alignRightDivStyle = { justifyContent: "flex-end" };
   const alignLeftDivStyle = { justifyContent: "flex-start" };
@@ -36,13 +38,13 @@ export default function HeaderBar({
 
   useEffect(() => {
     if (backgroundColors.length > 0) {
-      setCurrentBackgroundColor(backgroundColors[0])
+      setCurrentBackgroundColor(backgroundColors[0]);
     }
     if (textColors.length > 0) {
-      setCurrentTextColor(textColors[0])
+      setCurrentTextColor(textColors[0]);
     }
     if (underlineColors.length > 0) {
-      setCurrentUnderlineColor(underlineColors[0])
+      setCurrentUnderlineColor(underlineColors[0]);
     }
   }, []);
 

@@ -17,7 +17,7 @@ const HoverMenu = ({
 
   return (
     <div
-      className={`${styles.hoverFlexContainer} d-none d-md-flex`}
+      className={`${styles.hoverFlexContainer} d-none d-lg-flex`}
       style={{
         top: `${containerDisplacement}px`,
         transition: "top 0.45s ease-in-out",
@@ -83,7 +83,7 @@ export default function Navigation() {
   return (
     <div className={styles.container}>
       <div className={styles.flexContainer} onMouseEnter={handleMouseEnter}>
-        <div className={`${styles.wordmarkContainer} d-none d-md-flex`}>
+        <div className={`${styles.wordmarkContainer} d-none d-lg-flex`}>
           <Link href="/">
             <Wordmark
               color={"var(--maize)"}
@@ -93,7 +93,7 @@ export default function Navigation() {
             />
           </Link>
         </div>
-        <div className={`${styles.wordmarkContainerMobile} d-md-none`}>
+        <div className={`${styles.wordmarkContainerMobile} d-lg-none`}>
           {isXsScreen ? (
             <Link href="/">
               <Wordmark
@@ -116,12 +116,12 @@ export default function Navigation() {
         </div>
         <div className={styles.menuLabelContainer}>
           <h1
-            className={`${styles.menuLabel} abolitionRegular d-none d-md-block`}
+            className={`${styles.menuLabel} abolitionRegular d-none d-lg-block`}
           >
             Menu
           </h1>
           <div
-            className="d-block d-md-none"
+            className="d-block d-lg-none"
             style={{
               border: `${menuIconSize}px solid white`,
               borderRadius: `${menuIconSize}px`,

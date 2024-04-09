@@ -1,35 +1,13 @@
 import styles from "./Home.module.css";
-import Image from "next/image";
 import Wordmark from "./Components/Wordmark";
 import HeaderBar from "./Components/HeaderBar";
+import VideoWithToolbar from "./Components/VideoWithToolbar";
 
 export default function Home() {
   return (
     <>
-      <div className={`${styles.videoPlayer}`}>
-        <div style={{ alignSelf: "center", color: "var(--cosmic-latte)" }}>
-          Video goes here
-        </div>
-        <div className={`${styles.videoToolBar}`}>
-          <Image
-            className={styles.icon}
-            src={"/Play.svg"}
-            width={30}
-            height={30}
-          />
-          <Image
-            className={styles.icon}
-            src={"/Volume.svg"}
-            width={38}
-            height={38}
-          />
-          <Image
-            className={styles.icon}
-            src={"/Full Screen.svg"}
-            width={38}
-            height={38}
-          />
-        </div>
+      <div className={styles.videoPlayer}>
+        <VideoWithToolbar src={"/orange.mp4"} />
       </div>
 
       <div className={`contentContainer`}>
@@ -60,14 +38,14 @@ export default function Home() {
               Which are vanishing?
             </p>
           </div>
-          <div className="col-md-3" />
+          <div className="col-lg-3" />
         </div>
       </div>
 
       <HeaderBar
         text={"SUPPORT"}
-        backgroundColors={["var(--burnt-orange)", "var(--lighter-blue)"]}
-        textColors={["var(--lighter-blue)", "var(--dark-teal)"]}
+        backgroundColors={["var(--burnt-orange)", "var(--light-blue)"]}
+        textColors={["var(--light-blue)", "var(--dark-teal)"]}
         underlineColors={["var(--dark-teal)", "var(--burnt-orange)"]}
         link={"#"}
       />
@@ -114,7 +92,7 @@ export default function Home() {
         </div>
 
         <div className={`row`} style={{ margin: "30px 20px 0 20px" }}>
-          <p className={`col-12 col-md-8`} style={{ marginBottom: "0" }}>
+          <p className={`col-12 col-lg-8`} style={{ marginBottom: "0" }}>
             Lorem ipsum dolor sit amet. Ad aliquam accusantium hic sequi fugiat
             et corporis facere hic ratione tempore a tenetur distinctio cum
             galisum quasi in dolor consequatur. Ut sint ipsum ut error nihil sed
@@ -124,9 +102,9 @@ export default function Home() {
             laudantium qui perferendis assumenda quo odit quia est nihil iusto
             sit blanditiis doloremque in totam reprehenderit.
           </p>
-          <div className="d-none d-md-block col" />
+          <div className="d-none d-lg-block col" />
           <h1
-            className={`abolitionRegular col-md-2 col-12`}
+            className={`abolitionRegular col-lg-2 col-12`}
             style={{
               textAlign: "end",
               alignSelf: "flex-end",

@@ -1,0 +1,40 @@
+.videoPlayerContainer {
+  height: calc(100vh - 190px);
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .videoPlayerContainer {
+    width: calc(100% + 12px);
+  }
+
+  .videoDescriptionContainer {
+    min-height: 30vh;
+    height: auto;
+  }
+}
+
+.videoPlayer {
+  background-color: black;
+  padding: 0;
+}
+
+.videoDescriptionContainer {
+  background-color: var(--cosmic-latte);
+}
+
+.teamContainer {
+  background-color: var(--black-coffee);
+  padding: 60px 50px 80px 50px;
+}
+
+.teamMember {
+  font-size: 16;
+  color: var(--light-maize);
+  display: inline;
+}
+
+.teamMemberLink {
+  color: var(--lime);
+  display: inline;
+}

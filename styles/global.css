@@ -1,5 +1,4 @@
 @import url("https://use.typekit.net/boh7gew.css");
-@import url("https://use.typekit.net/boh7gew.css");
 
 :root {
   --cosmic-latte: #fff6e7;
@@ -7,8 +6,7 @@
   --light-maize: #fcdb8c;
   --temptress: #3c1f1b;
   --burnt-orange: #a44a0d;
-  --light-blue: #b8d8e0;
-  --lighter-blue: #cddfe3;
+  --light-blue: #cddfe3;
   --dark-teal: #256155;
   --lime: #6ce25c;
   --black-coffee: #403428;
@@ -55,6 +53,30 @@ a {
   font-weight: 400;
   font-style: italic;
   font-size: x-small;
+}
+
+.newFrankRegular {
+  font-family: "new-frank", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.newFrankBold {
+  font-family: "new-frank", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.inputMonoCondensedItalic {
+  font-family: "input-mono-condensed", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.atramentSemiBoldItalic {
+  font-family: "atrament-web", sans-serif;
+  font-weight: 600;
+  font-style: italic;
 }
 
 .contentContainer {

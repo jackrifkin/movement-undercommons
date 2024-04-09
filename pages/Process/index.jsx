@@ -61,7 +61,7 @@ export default function Process() {
       />
       <div className={`contentContainer`}>
         <div className="row">
-          <div className="col-12 col-md-7">
+          <div className="col-12 col-lg-7">
             <h4 className={`${styles.headerText} abolitionRegular`}>
               MOVEMENT UNDERCOMMONS: TECHNOLOGY AS RESISTANCE | FUTURE ARCHIVES
             </h4>
@@ -90,11 +90,11 @@ export default function Process() {
               individual’s movement ‘identity’.
             </p>
           </div>
-          <div className="col-12 col-md-5" />
+          <div className="col-12 col-lg-5" />
         </div>
 
         <div className={`${styles.marginTop50} row`}>
-          <div className="col-12 col-md-7" style={{ paddingRight: "0" }}>
+          <div className="col-12 col-lg-7" style={{ paddingRight: "0" }}>
             {/* top 2 images */}
             <div className="d-flex justify-content-between flex-wrap">
               <div
@@ -115,7 +115,7 @@ export default function Process() {
               />
             </div>
           </div>
-          <div className="col-12 col-md-5" style={{ paddingLeft: "0" }}>
+          <div className="col-12 col-lg-5" style={{ paddingLeft: "0" }}>
             {/* image descriptions */}
             <div
               className="altText"
@@ -139,7 +139,7 @@ export default function Process() {
           </div>
         </div>
         <div className={`${styles.marginTop50} row`}>
-          <div className="col-12 col-md-7">
+          <div className="col-12 col-lg-7">
             <div className="d-flex justify-content-center align-items-center">
               {/* third middle image */}
               <div className="d-flex justify-content-center">
@@ -154,7 +154,7 @@ export default function Process() {
               </div>
             </div>
           </div>
-          <div className="col-12 col-md-5" />
+          <div className="col-12 col-lg-5" />
         </div>
 
         <h4
@@ -164,7 +164,7 @@ export default function Process() {
         </h4>
         <br />
         <div className={`row`}>
-          <div className="col-12 col-md-7">
+          <div className="col-12 col-lg-7">
             <p>
               What is conveyed through our movements? Can we speak of a movement
               identity, some  combination of biological, environmental, and
@@ -225,7 +225,7 @@ export default function Process() {
               ‘of a place’.
             </p>
           </div>
-          <div className="col-12 col-md-5">
+          <div className="col-12 col-lg-5">
             <div className={`altText`} style={{ width: "250px" }}>
               <p>
                 <sup>1</sup>I re-purpose Ivan Illich’s concept of vernacular
@@ -268,7 +268,7 @@ export default function Process() {
         </h4>
         <br />
         <div className={`row`}>
-          <div className="col-12 col-md-7">
+          <div className="col-12 col-lg-7">
             <p>
               The nature of this work is expressive, qualitative, and
               quantitative; I look to create a ‘kinetic  haiku’ from movement
@@ -297,7 +297,7 @@ export default function Process() {
               making up a single portrait.
             </p>
           </div>
-          <div className="col-12 col-md-5">
+          <div className="col-12 col-lg-5">
             <div className={`altText`} style={{ width: "250px" }}>
               <p>
                 <sup>6</sup>This series of portraits was presented as private
@@ -312,14 +312,14 @@ export default function Process() {
           style={{ marginLeft: "0" }}
         >
           <div
-            className="col-12 col-md-7"
+            className="col-12 col-lg-7"
             style={{
               backgroundColor: "grey",
               border: "2px solid black",
               height: "445px",
             }}
           ></div>
-          <div className="col-12 col-md-5">
+          <div className="col-12 col-lg-5">
             <div className={`altText`} style={{ width: "250px" }}>
               <p>Image 1: Untitled sketch#1, [still] Phoenix, Arizona (2021)</p>
             </div>
@@ -333,7 +333,7 @@ export default function Process() {
         </h4>
         <br />
         <div className={`row`}>
-          <div className="col-12 col-md-7">
+          <div className="col-12 col-lg-7">
             <p>
               While photography, video, and audio recording technologies have
               accelerated the means and  ways in which those media are produced
@@ -362,7 +362,7 @@ export default function Process() {
               distribution.
             </p>
           </div>
-          <div className="col-12 col-md-5">
+          <div className="col-12 col-lg-5">
             <div className={`altText`} style={{ width: "250px" }}>
               <p>
                 a. The Ohio State University, Advanced Center for Computation

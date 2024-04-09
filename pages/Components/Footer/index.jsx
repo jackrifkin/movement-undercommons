@@ -24,14 +24,14 @@ const HoverFooter = ({
         height: `${containerDisplacement}px`,
         top: `-${containerDisplacement}px`,
         transition:
-          "height 0.45s ease-in-out, top 0.45s ease-in-out, border-top 0.45s ease-out",
+          "height 0.3s ease-in-out, top 0.3s ease-in-out, border-top 0.3s ease-out",
       }}
     >
       <div
         className={`d-flex justify-content-around flex-column align-items-center ${styles.hoverFooterFlexContainer}`}
         style={{
           top: `${contentDisplacement}px`,
-          transition: "top 0.45s ease-in-out",
+          transition: "top 0.3s ease-in-out",
         }}
         onMouseLeave={handleMouseLeave}
       >
@@ -71,7 +71,7 @@ export default function Footer() {
 
   return (
     <>
-      <div className={`${styles.container} d-none d-md-block`}>
+      <div className={`${styles.container} d-none d-lg-block`}>
         <div
           className={`d-flex justify-content-around flex-column align-items-center`}
           style={{
@@ -113,7 +113,7 @@ export default function Footer() {
           setContentDisplacement={setContentDisplacement}
         />
       </div>
-      <div className={`d-block d-md-none ${styles.mobileContainer}`}>
+      <div className={`d-block d-lg-none ${styles.mobileContainer}`}>
         <div
           className={`d-flex flex-column justify-content-around ${styles.mobileLabelsContainer}`}
         >

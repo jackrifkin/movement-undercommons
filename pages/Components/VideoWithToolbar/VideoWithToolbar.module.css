@@ -1,0 +1,36 @@
+.videoToolBar {
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: black;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 10px 0;
+}
+
+.icon {
+  margin-right: 15px;
+}
+
+.videoContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: black;
+}
+
+.videoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - 50px);
+}
+
+.video {
+  display: block;
+  object-fit: contain;
+}
