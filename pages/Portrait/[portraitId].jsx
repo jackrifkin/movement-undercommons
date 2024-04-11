@@ -56,7 +56,7 @@ export default function Portrait() {
           return (
             <div className={styles.teamMemberContainer}>
               <p className={`${styles.teamMember} inputMonoCondensedItalic`}>
-                {member.name} /<br className="d-lg-none"/> {member.role}{" "}
+                {member.name} /<br className="d-lg-none" /> {member.role}{" "}
               </p>
               {member.link ? (
                 <Link

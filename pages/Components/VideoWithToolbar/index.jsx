@@ -2,10 +2,7 @@ import styles from "./VideoWithToolbar.module.css";
 import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 
-const VideoWithToolbar = ({ 
-  src,
-  loops = true,
-}) => {
+const VideoWithToolbar = ({ src, loops = true }) => {
   const videoRef = useRef(null);
   const [videoDimensions, setVideoDimensions] = useState({
     width: 0,
@@ -27,7 +24,7 @@ const VideoWithToolbar = ({
   const toggleMute = () => {
     const videoElement = videoRef.current;
     videoElement.muted = !videoElement.muted;
-    setIsMuted(!isMuted)
+    setIsMuted(!isMuted);
   };
 
   const toggleFullscreen = () => {
