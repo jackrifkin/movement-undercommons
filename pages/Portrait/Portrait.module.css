@@ -5,12 +5,16 @@
 
 @media (max-width: 992px) {
   .videoPlayerContainer {
-    width: calc(100% + 12px);
+    margin: 0;
   }
 
   .videoDescriptionContainer {
     min-height: 30vh;
     height: auto;
+  }
+
+  .teamMemberContainer {
+    margin-bottom: 15px;
   }
 }
 

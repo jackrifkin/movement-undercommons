@@ -1,7 +1,6 @@
 import Image from "next/image";
 import styles from "./Footer.module.css";
 import { useState } from "react";
-import Link from "next/link";
 
 const contactEmail = "GRISHACOLEMAN@EXAMPLE.COM";
 const socialTag = "@MOVEMENTUNDERCOMMONS";

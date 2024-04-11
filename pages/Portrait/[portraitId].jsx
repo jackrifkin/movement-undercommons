@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import styles from "./Portrait.module.css";
 import { useEffect, useState } from "react";
+// TODO: should be fetched from redux store
 import portraits from "./../../temp_data/portraits.json";
 import SubMenu from "../Components/SubMenu";
 import Link from "next/link";
@@ -53,9 +54,9 @@ export default function Portrait() {
         </h3>
         {currentPortrait?.teamMembers.map((member) => {
           return (
-            <>
+            <div className={styles.teamMemberContainer}>
               <p className={`${styles.teamMember} inputMonoCondensedItalic`}>
-                {member.name} / {member.role}{" "}
+                {member.name} /<br className="d-lg-none"/> {member.role}{" "}
               </p>
               {member.link ? (
                 <Link
@@ -68,7 +69,7 @@ export default function Portrait() {
                 <></>
               )}
               <br />
-            </>
+            </div>
           );
         })}
       </div>

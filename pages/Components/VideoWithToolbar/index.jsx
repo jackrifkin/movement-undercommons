@@ -2,12 +2,17 @@ import styles from "./VideoWithToolbar.module.css";
 import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 
-const VideoWithToolbar = ({ src }) => {
+const VideoWithToolbar = ({ 
+  src,
+  loops = true,
+}) => {
   const videoRef = useRef(null);
   const [videoDimensions, setVideoDimensions] = useState({
     width: 0,
     height: 0,
   });
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [isMuted, setIsMuted] = useState(true);
 
   const togglePlay = () => {
     const videoElement = videoRef.current;
@@ -16,11 +21,13 @@ const VideoWithToolbar = ({ src }) => {
     } else {
       videoElement.pause();
     }
+    setIsPlaying(!isPlaying);
   };
 
   const toggleMute = () => {
     const videoElement = videoRef.current;
     videoElement.muted = !videoElement.muted;
+    setIsMuted(!isMuted)
   };
 
   const toggleFullscreen = () => {
@@ -54,18 +61,6 @@ const VideoWithToolbar = ({ src }) => {
         videoWidth = videoHeight * aspectRatio;
       }
 
-      console.log(parentHeight);
-      console.log(parentWidth);
-      console.log(
-        "aspectRatio: " +
-          aspectRatio +
-          " from: " +
-          videoElement.videoWidth +
-          " " +
-          videoElement.videoHeight,
-      );
-      console.log("width: " + videoWidth + " height: " + videoHeight);
-
       setVideoDimensions({ width: videoWidth, height: videoHeight });
     }
   };
@@ -97,6 +92,7 @@ const VideoWithToolbar = ({ src }) => {
           src={src}
           controls={false}
           autoPlay
+          loop={loops}
           disableRemotePlayback
           muted
           onClick={togglePlay}
@@ -113,14 +109,14 @@ const VideoWithToolbar = ({ src }) => {
       <div className={`${styles.videoToolBar}`}>
         <Image
           className={styles.icon}
-          src={"/Play.svg"}
+          src={isPlaying ? "/Pause.svg" : "/Play.svg"}
           width={30}
           height={30}
           onClick={togglePlay}
         />
         <Image
           className={styles.icon}
-          src={"/Volume.svg"}
+          src={isMuted ? "/Muted.svg" : "/Volume.svg"}
           width={38}
           height={38}
           onClick={toggleMute}
