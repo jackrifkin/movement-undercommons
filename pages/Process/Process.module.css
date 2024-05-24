@@ -7,6 +7,9 @@
   margin-top: 50px;
 }
 
-.publicationLink:hover {
-  text-decoration: underline !important;
+@media (max-width: 992px) {
+  .altText {
+    margin-left: -12px;
+    margin-top: 15px;
+  }
 }

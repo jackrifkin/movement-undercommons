@@ -370,13 +370,9 @@ export default function Process() {
           </div>
           <div className="col-12 col-lg-5">
             <div
-              className={`altText`}
-              style={{ width: "250px", marginLeft: "-12px" }}
+              className={`${styles.altText} altText`}
+              style={{ width: "250px"}}
             >
-              <div
-                className="d-block d-lg-none"
-                style={{ marginTop: "15px" }}
-              />
               <p>Image 1: Untitled sketch#1, [still] Phoenix, Arizona (2021)</p>
             </div>
           </div>
