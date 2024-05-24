@@ -1,5 +1,5 @@
 .videoPlayerContainer {
-  height: calc(100vh - 190px);
+  height: calc(100vh - 130px);
   width: 100%;
 }
 
@@ -21,10 +21,12 @@
 .videoPlayer {
   background-color: black;
   padding: 0;
+  height: 100%;
 }
 
 .videoDescriptionContainer {
   background-color: var(--cosmic-latte);
+  padding: 50px 0 50px 0;
 }
 
 .teamContainer {

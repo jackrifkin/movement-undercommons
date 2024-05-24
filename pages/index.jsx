@@ -7,12 +7,13 @@ export default function Home() {
   return (
     <>
       <div className={styles.videoPlayer}>
-        <VideoWithToolbar src={"/orange.mp4"} />
+        <VideoWithToolbar src={"/movement-undercommons/orange.mp4"} hasToolbar={false} />
       </div>
 
       <div className={`contentContainer`}>
         <div className="row">
           <div className="col">
+            {/* TODO: make wordmark responsive */}
             <Wordmark color={"black"} width={"500px"} />
             <p style={{ marginTop: "10px" }}>
               The Movement Undercommons explores human movement vernaculars -
@@ -63,28 +64,28 @@ export default function Home() {
         >
           <div className={styles.logoContainer} style={{ width: "175px" }}>
             <img
-              src="/irc-logo.svg"
+              src="/movement-undercommons/irc-logo.svg"
               alt="International Rescue Committee"
               className={styles.logo}
             />
           </div>
           <div className={styles.logoContainer} style={{ width: "250px" }}>
             <img
-              src="/jacobspillowlogo.png"
+              src="/movement-undercommons/jacobspillowlogo.png"
               alt="Jacob's Pillow"
               className={styles.logo}
             />
           </div>
           <div className={styles.logoContainer} style={{ width: "225px" }}>
             <img
-              src="/radcliffe-logo.svg"
+              src="/movement-undercommons/radcliffe-logo.svg"
               alt="Radcliffe Institute for Advanced Study"
               className={styles.logo}
             />
           </div>
           <div className={styles.logoContainer} style={{ width: "200px" }}>
             <img
-              src="/NE-arts-logo.svg"
+              src="/movement-undercommons/NE-arts-logo.svg"
               alt="National Endowment for the Arts"
               className={styles.logo}
             />
@@ -92,16 +93,6 @@ export default function Home() {
         </div>
 
         <div className={`row`} style={{ margin: "30px 20px 0 20px" }}>
-          <p className={`col-12 col-lg-8`} style={{ marginBottom: "0" }}>
-            Lorem ipsum dolor sit amet. Ad aliquam accusantium hic sequi fugiat
-            et corporis facere hic ratione tempore a tenetur distinctio cum
-            galisum quasi in dolor consequatur. Ut sint ipsum ut error nihil sed
-            magnam tempore qui asperiores doloremque ut cupiditate voluptates et
-            omnis enim. Non voluptatem nobis aut cupiditate doloremque ut
-            voluptates dignissimos qui dolorem necessitatibus? Et esse
-            laudantium qui perferendis assumenda quo odit quia est nihil iusto
-            sit blanditiis doloremque in totam reprehenderit.
-          </p>
           <div className="d-none d-lg-block col" />
           <h1
             className={`abolitionRegular col-lg-2 col-12`}

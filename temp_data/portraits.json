@@ -1,522 +1,92 @@
 [
   {
     "id": 0,
-    "title": "Portrait of Jess, Dancing Burlesque Dancing Burlesque Dancing Burlesque Dancing BurlesqueDancing Burlesque (Poetic, Virtuosic)",
+    "title": "Portrait of Goolam Drawing a Dragon",
     "year": 2022,
-    "filePath": "/Jess Portrait.mp4",
-    "location": "Phoenix, AZ",
+    "filePath": "/GoolamPortrait.mp4",
+    "thumbnailFilePath": "/GoolamThumbnail.png",
+    "location": "International Rescue Committee, Phoenix, AZ",
     "filters": ["Poetic", "Virtuosic"],
-    "funder": "International Rescue Committee",
-    "description": "Full body, including hands and feet",
-    "teamName": "Phoenix Team",
-    "teamMembers": [
-      {
-        "name": "Grisha Coleman",
-        "role": "Principle Investigator & Artistic Director",
-        "link": "https://search.asu.edu/profile/1301121"
-      },
-      {
-        "name": "Melissa Cliver",
-        "role": "Design Strategist",
-        "link": null
-      },
-      {
-        "name": "Jiaying Brust",
-        "role": "Creative Technologist",
-        "link": null
-      },
-      {
-        "name": "Zakiya Johnson",
-        "role": "Communications & Documentation",
-        "link": null
-      },
-      {
-        "name": "Lavendar Sy",
-        "role": "Audio & Production",
-        "link": null
-      },
-      {
-        "name": "Tejaswi Gowda",
-        "role": "Software Developer",
-        "link": "https://search.asu.edu/profile/793113"
-      },
-      {
-        "name": "Assegid Kidane",
-        "role": "Electrical Engineer",
-        "link": "https://search.asu.edu/profile/215415"
-      },
-      {
-        "name": "Shawn Lawson",
-        "role": "Animation Artist",
-        "link": "https://search.asu.edu/profile/3706429"
-      }
-    ]
+    "description": "Tracking Upper Body and Hands"
   },
   {
     "id": 1,
-    "title": "Portrait of Jess, Dancing Burlesque (Mundane, Labor)",
+    "title": "Portrait of Goolam Drawing a Dragon w/ Skeleton",
     "year": 2022,
-    "filePath": "/Jess Portrait.mp4",
-    "location": "Phoenix, AZ",
-    "filters": ["Mundane", "Labor"],
-    "funder": "International Rescue Committee",
-    "description": "Full body, including hands and feet",
-    "teamName": "Phoenix Team",
-    "teamMembers": [
-      {
-        "name": "Grisha Coleman",
-        "role": "Principle Investigator & Artistic Director",
-        "link": "https://search.asu.edu/profile/1301121"
-      },
-      {
-        "name": "Melissa Cliver",
-        "role": "Design Strategist",
-        "link": null
-      },
-      {
-        "name": "Jiaying Brust",
-        "role": "Creative Technologist",
-        "link": null
-      },
-      {
-        "name": "Zakiya Johnson",
-        "role": "Communications & Documentation",
-        "link": null
-      },
-      {
-        "name": "Lavendar Sy",
-        "role": "Audio & Production",
-        "link": null
-      },
-      {
-        "name": "Tejaswi Gowda",
-        "role": "Software Developer",
-        "link": "https://search.asu.edu/profile/793113"
-      },
-      {
-        "name": "Assegid Kidane",
-        "role": "Electrical Engineer",
-        "link": "https://search.asu.edu/profile/215415"
-      },
-      {
-        "name": "Shawn Lawson",
-        "role": "Animation Artist",
-        "link": "https://search.asu.edu/profile/3706429"
-      }
-    ]
+    "filePath": "/GoolamPortraitWithSkeleton.mp4",
+    "thumbnailFilePath": "/GoolamWithSkeletonThumbnail.png",
+    "location": "International Rescue Committee, Phoenix, AZ",
+    "filters": ["Poetic", "Virtuosic"],
+    "description": "Tracking Upper Body and Hands"
   },
   {
     "id": 2,
-    "title": "Portrait of Jess, Dancing Burlesque (Poetic, Virtuosic)",
+    "title": "Portrait of Isam Farming",
     "year": 2022,
-    "filePath": "/Jess Portrait.mp4",
-    "location": "Phoenix, AZ",
-    "filters": ["Poetic", "Virtuosic"],
-    "funder": "International Rescue Committee",
-    "description": "Full body, including hands and feet",
-    "teamName": "Phoenix Team",
-    "teamMembers": [
-      {
-        "name": "Grisha Coleman",
-        "role": "Principle Investigator & Artistic Director",
-        "link": "https://search.asu.edu/profile/1301121"
-      },
-      {
-        "name": "Melissa Cliver",
-        "role": "Design Strategist",
-        "link": null
-      },
-      {
-        "name": "Jiaying Brust",
-        "role": "Creative Technologist",
-        "link": null
-      },
-      {
-        "name": "Zakiya Johnson",
-        "role": "Communications & Documentation",
-        "link": null
-      },
-      {
-        "name": "Lavendar Sy",
-        "role": "Audio & Production",
-        "link": null
-      },
-      {
-        "name": "Tejaswi Gowda",
-        "role": "Software Developer",
-        "link": "https://search.asu.edu/profile/793113"
-      },
-      {
-        "name": "Assegid Kidane",
-        "role": "Electrical Engineer",
-        "link": "https://search.asu.edu/profile/215415"
-      },
-      {
-        "name": "Shawn Lawson",
-        "role": "Animation Artist",
-        "link": "https://search.asu.edu/profile/3706429"
-      }
-    ]
+    "filePath": "/IsamFarming.mp4",
+    "thumbnailFilePath": "/IsamThumbnail.png",
+    "location": "Spaces of Opportunity, Phoenix, AZ",
+    "filters": ["Labor", "Functional"],
+    "description": "Full body, including hands and feet"
   },
   {
     "id": 3,
-    "title": "Portrait of Jess, Dancing Burlesque (Poetic, Virtuosic)",
+    "title": "Portrait of Margarida Cleaning",
     "year": 2022,
-    "filePath": "/Jess Portrait.mp4",
-    "location": "Phoenix, AZ",
-    "filters": ["Poetic", "Virtuosic"],
-    "funder": "International Rescue Committee",
-    "description": "Full body, including hands and feet",
-    "teamName": "Phoenix Team",
-    "teamMembers": [
-      {
-        "name": "Grisha Coleman",
-        "role": "Principle Investigator & Artistic Director",
-        "link": "https://search.asu.edu/profile/1301121"
-      },
-      {
-        "name": "Melissa Cliver",
-        "role": "Design Strategist",
-        "link": null
-      },
-      {
-        "name": "Jiaying Brust",
-        "role": "Creative Technologist",
-        "link": null
-      },
-      {
-        "name": "Zakiya Johnson",
-        "role": "Communications & Documentation",
-        "link": null
-      },
-      {
-        "name": "Assegid Kidane",
-        "role": "Electrical Engineer",
-        "link": "https://search.asu.edu/profile/215415"
-      },
-      {
-        "name": "Shawn Lawson",
-        "role": "Animation Artist",
-        "link": "https://search.asu.edu/profile/3706429"
-      }
-    ]
+    "filePath": "/MargaridaPortrait.mp4",
+    "thumbnailFilePath": "/MargaridaThumbnail.png",
+    "location": "RRI, Cambridge, MA",
+    "filters": ["Labor", "Mundane", "Functional"],
+    "description": "Tracking Full Body, including Hands and Feet"
   },
   {
     "id": 4,
-    "title": "Portrait of Jess, Dancing Burlesque (Poetic, Virtuosic)",
+    "title": "Portrait of Abdul Picking Eggplants and Carrots",
     "year": 2022,
-    "filePath": "/Jess Portrait.mp4",
-    "location": "Phoenix, AZ",
-    "filters": ["Poetic", "Virtuosic"],
-    "funder": "International Rescue Committee",
-    "description": "Full body, including hands and feet",
-    "teamName": "Phoenix Team",
-    "teamMembers": [
-      {
-        "name": "Grisha Coleman",
-        "role": "Principle Investigator & Artistic Director",
-        "link": "https://search.asu.edu/profile/1301121"
-      },
-      {
-        "name": "Melissa Cliver",
-        "role": "Design Strategist",
-        "link": null
-      },
-      {
-        "name": "Jiaying Brust",
-        "role": "Creative Technologist",
-        "link": null
-      },
-      {
-        "name": "Zakiya Johnson",
-        "role": "Communications & Documentation",
-        "link": null
-      },
-      {
-        "name": "Lavendar Sy",
-        "role": "Audio & Production",
-        "link": null
-      },
-      {
-        "name": "Tejaswi Gowda",
-        "role": "Software Developer",
-        "link": "https://search.asu.edu/profile/793113"
-      },
-      {
-        "name": "Assegid Kidane",
-        "role": "Electrical Engineer",
-        "link": "https://search.asu.edu/profile/215415"
-      },
-      {
-        "name": "Shawn Lawson",
-        "role": "Animation Artist",
-        "link": "https://search.asu.edu/profile/3706429"
-      }
-    ]
+    "filePath": "/AbdulPortrait.mp4",
+    "thumbnailFilePath": "/AbdulThumbnail.png",
+    "location": "Spaces of Opportunity, Phoenix, AZ",
+    "filters": ["Labor", "Mundane"],
+    "description": "Tracking Full Body, including Hands and Feet"
   },
   {
     "id": 5,
-    "title": "Portrait of Jess, Dancing Burlesque (Mundane, Virtuosic)",
+    "title": "Portrait of Robin Conducting Traffic",
     "year": 2022,
-    "filePath": "/Jess Portrait.mp4",
-    "location": "Phoenix, AZ",
-    "filters": ["Mundane", "Virtuosic"],
-    "funder": "International Rescue Committee",
-    "description": "Full body, including hands and feet",
-    "teamName": "Phoenix Team",
-    "teamMembers": [
-      {
-        "name": "Grisha Coleman",
-        "role": "Principle Investigator & Artistic Director",
-        "link": "https://search.asu.edu/profile/1301121"
-      },
-      {
-        "name": "Melissa Cliver",
-        "role": "Design Strategist",
-        "link": null
-      },
-      {
-        "name": "Jiaying Brust",
-        "role": "Creative Technologist",
-        "link": null
-      },
-      {
-        "name": "Zakiya Johnson",
-        "role": "Communications & Documentation",
-        "link": null
-      },
-      {
-        "name": "Lavendar Sy",
-        "role": "Audio & Production",
-        "link": null
-      },
-      {
-        "name": "Tejaswi Gowda",
-        "role": "Software Developer",
-        "link": "https://search.asu.edu/profile/793113"
-      },
-      {
-        "name": "Assegid Kidane",
-        "role": "Electrical Engineer",
-        "link": "https://search.asu.edu/profile/215415"
-      },
-      {
-        "name": "Shawn Lawson",
-        "role": "Animation Artist",
-        "link": "https://search.asu.edu/profile/3706429"
-      }
-    ]
+    "filePath": "/RobinPortrait.mp4",
+    "thumbnailFilePath": "/RobinThumbnail.png",
+    "location": "Morse PreSchool, Cambridge, MA",
+    "filters": ["Functional", "Labor"],
+    "description": "Tracking Full Body and Hands"
   },
   {
     "id": 6,
-    "title": "Portrait of Jess, Dancing Burlesque (Labor, Functional, Virtuosic)",
+    "title": "Portrait of Val Drumming",
     "year": 2022,
-    "filePath": "/Jess Portrait.mp4",
-    "location": "Phoenix, AZ",
-    "filters": ["Labor", "Functional", "Virtuosic"],
-    "funder": "International Rescue Committee",
-    "description": "Full body, including hands and feet",
-    "teamName": "Phoenix Team",
-    "teamMembers": [
-      {
-        "name": "Grisha Coleman",
-        "role": "Principle Investigator & Artistic Director",
-        "link": "https://search.asu.edu/profile/1301121"
-      },
-      {
-        "name": "Melissa Cliver",
-        "role": "Design Strategist",
-        "link": null
-      },
-      {
-        "name": "Jiaying Brust",
-        "role": "Creative Technologist",
-        "link": null
-      },
-      {
-        "name": "Zakiya Johnson",
-        "role": "Communications & Documentation",
-        "link": null
-      },
-      {
-        "name": "Lavendar Sy",
-        "role": "Audio & Production",
-        "link": null
-      },
-      {
-        "name": "Tejaswi Gowda",
-        "role": "Software Developer",
-        "link": "https://search.asu.edu/profile/793113"
-      },
-      {
-        "name": "Assegid Kidane",
-        "role": "Electrical Engineer",
-        "link": "https://search.asu.edu/profile/215415"
-      },
-      {
-        "name": "Shawn Lawson",
-        "role": "Animation Artist",
-        "link": "https://search.asu.edu/profile/3706429"
-      }
-    ]
+    "filePath": "/ValDrumming.mp4",
+    "thumbnailFilePath": "/ValThumbnail.png",
+    "location": "Artlab, Cambridge, MA",
+    "filters": ["Poetic", "Virtuosic"],
+    "description": "Tracking Full Body, including Hands and Feet"
   },
   {
     "id": 7,
-    "title": "Portrait of Jess, Dancing Burlesque (Poetic, Virtuosic)",
+    "title": "Portrait of Basma Making Baklava",
     "year": 2022,
-    "filePath": "/Jess Portrait.mp4",
-    "location": "Phoenix, AZ",
-    "filters": ["Poetic", "Virtuosic"],
-    "funder": "International Rescue Committee",
-    "description": "Full body, including hands and feet",
-    "teamName": "Phoenix Team",
-    "teamMembers": [
-      {
-        "name": "Grisha Coleman",
-        "role": "Principle Investigator & Artistic Director",
-        "link": "https://search.asu.edu/profile/1301121"
-      },
-      {
-        "name": "Melissa Cliver",
-        "role": "Design Strategist",
-        "link": null
-      },
-      {
-        "name": "Jiaying Brust",
-        "role": "Creative Technologist",
-        "link": null
-      },
-      {
-        "name": "Zakiya Johnson",
-        "role": "Communications & Documentation",
-        "link": null
-      },
-      {
-        "name": "Lavendar Sy",
-        "role": "Audio & Production",
-        "link": null
-      },
-      {
-        "name": "Tejaswi Gowda",
-        "role": "Software Developer",
-        "link": "https://search.asu.edu/profile/793113"
-      },
-      {
-        "name": "Assegid Kidane",
-        "role": "Electrical Engineer",
-        "link": "https://search.asu.edu/profile/215415"
-      },
-      {
-        "name": "Shawn Lawson",
-        "role": "Animation Artist",
-        "link": "https://search.asu.edu/profile/3706429"
-      }
-    ]
+    "filePath": "/BasmaPortrait.mp4",
+    "thumbnailFilePath": "/BasmaThumbnail.png",
+    "location": "Tempe, AZ",
+    "filters": ["Labor", "Functional", "Virtuosic"],
+    "description": "Tracking Upper Body and Hands"
   },
   {
     "id": 8,
-    "title": "Portrait of Jess, Dancing Burlesque (Poetic, Virtuosic)",
+    "title": "Portrait of Jess, Dancing Burlesque",
     "year": 2022,
-    "filePath": "/Jess Portrait.mp4",
-    "location": "Phoenix, AZ",
+    "filePath": "/JessPortrait.mp4",
+    "thumbnailFilePath": "/JessThumbnail.png",
+    "location": "International Rescue Committee, Phoenix, AZ",
     "filters": ["Poetic", "Virtuosic"],
-    "funder": "International Rescue Committee",
-    "description": "Full body, including hands and feet",
-    "teamName": "Phoenix Team",
-    "teamMembers": [
-      {
-        "name": "Grisha Coleman",
-        "role": "Principle Investigator & Artistic Director",
-        "link": "https://search.asu.edu/profile/1301121"
-      },
-      {
-        "name": "Melissa Cliver",
-        "role": "Design Strategist",
-        "link": null
-      },
-      {
-        "name": "Jiaying Brust",
-        "role": "Creative Technologist",
-        "link": null
-      },
-      {
-        "name": "Zakiya Johnson",
-        "role": "Communications & Documentation",
-        "link": null
-      },
-      {
-        "name": "Lavendar Sy",
-        "role": "Audio & Production",
-        "link": null
-      },
-      {
-        "name": "Tejaswi Gowda",
-        "role": "Software Developer",
-        "link": "https://search.asu.edu/profile/793113"
-      },
-      {
-        "name": "Assegid Kidane",
-        "role": "Electrical Engineer",
-        "link": "https://search.asu.edu/profile/215415"
-      },
-      {
-        "name": "Shawn Lawson",
-        "role": "Animation Artist",
-        "link": "https://search.asu.edu/profile/3706429"
-      }
-    ]
-  },
-  {
-    "id": 9,
-    "title": "Portrait of Jess, Dancing Burlesque (Poetic, Virtuosic)",
-    "year": 2022,
-    "filePath": "/Jess Portrait.mp4",
-    "location": "Phoenix, AZ",
-    "filters": ["Poetic", "Virtuosic"],
-    "funder": "International Rescue Committee",
-    "description": "Full body, including hands and feet",
-    "teamName": "Phoenix Team",
-    "teamMembers": [
-      {
-        "name": "Grisha Coleman",
-        "role": "Principle Investigator & Artistic Director",
-        "link": "https://search.asu.edu/profile/1301121"
-      },
-      {
-        "name": "Melissa Cliver",
-        "role": "Design Strategist",
-        "link": null
-      },
-      {
-        "name": "Jiaying Brust",
-        "role": "Creative Technologist",
-        "link": null
-      },
-      {
-        "name": "Zakiya Johnson",
-        "role": "Communications & Documentation",
-        "link": null
-      },
-      {
-        "name": "Lavendar Sy",
-        "role": "Audio & Production",
-        "link": null
-      },
-      {
-        "name": "Tejaswi Gowda",
-        "role": "Software Developer",
-        "link": "https://search.asu.edu/profile/793113"
-      },
-      {
-        "name": "Assegid Kidane",
-        "role": "Electrical Engineer",
-        "link": "https://search.asu.edu/profile/215415"
-      },
-      {
-        "name": "Shawn Lawson",
-        "role": "Animation Artist",
-        "link": "https://search.asu.edu/profile/3706429"
-      }
-    ]
+    "description": "Tracking Full Body, including Hands and Feet"
   }
 ]

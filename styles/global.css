@@ -75,6 +75,11 @@ a {
   font-style: italic;
 }
 
+.inputMonoCondensed {
+  font-family: "input-mono-condensed", monospace;
+  font-weight: 400;
+}
+
 .atramentSemiBoldItalic {
   font-family: "atrament-web", sans-serif;
   font-weight: 600;
@@ -84,4 +89,8 @@ a {
 .contentContainer {
   padding: 75px 40px;
   background-color: var(--cosmic-latte);
+}
+
+* > img {
+  user-select: none;
 }

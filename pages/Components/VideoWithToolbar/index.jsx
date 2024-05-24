@@ -2,7 +2,7 @@ import styles from "./VideoWithToolbar.module.css";
 import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 
-const VideoWithToolbar = ({ src, loops = true }) => {
+const VideoWithToolbar = ({ src, loops = true, hasToolbar = true }) => {
   const videoRef = useRef(null);
   const [videoDimensions, setVideoDimensions] = useState({
     width: 0,
@@ -103,29 +103,31 @@ const VideoWithToolbar = ({ src, loops = true }) => {
         />
       </div>
 
-      <div className={`${styles.videoToolBar}`}>
-        <Image
-          className={styles.icon}
-          src={isPlaying ? "/Pause.svg" : "/Play.svg"}
-          width={30}
-          height={30}
-          onClick={togglePlay}
-        />
-        <Image
-          className={styles.icon}
-          src={isMuted ? "/Muted.svg" : "/Volume.svg"}
-          width={38}
-          height={38}
-          onClick={toggleMute}
-        />
-        <Image
-          className={styles.icon}
-          src={"/Full Screen.svg"}
-          width={38}
-          height={38}
-          onClick={toggleFullscreen}
-        />
-      </div>
+      {hasToolbar && (
+        <div className={`${styles.videoToolBar}`}>
+          <Image
+            className={styles.icon}
+            src={isPlaying ? "/movement-undercommons/Pause.svg" : "/movement-undercommons/Play.svg"}
+            width={30}
+            height={30}
+            onClick={togglePlay}
+          />
+          <Image
+            className={styles.icon}
+            src={isMuted ? "/movement-undercommons/Muted.svg" : "/movement-undercommons/Volume.svg"}
+            width={38}
+            height={38}
+            onClick={toggleMute}
+          />
+          <Image
+            className={styles.icon}
+            src={"/movement-undercommons/Full Screen.svg"}
+            width={38}
+            height={38}
+            onClick={toggleFullscreen}
+          />
+        </div>
+      )}
     </div>
   );
 };
