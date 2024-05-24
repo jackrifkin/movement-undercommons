@@ -99,13 +99,13 @@ export default function Process() {
             {/* top 2 images */}
             <div className="d-flex justify-content-between flex-wrap">
               <Image
-                src={"Process1.png"}
+                src={"/movement-undercommons/Process1.png"}
                 height={250}
                 width={250}
                 alt="Image 1"
               />
               <Image
-                src={"Process2.png"}
+                src={"/movement-undercommons/Process2.png"}
                 height={250}
                 width={250}
                 alt="Image 2"
@@ -141,7 +141,7 @@ export default function Process() {
         <div className={`${styles.marginTop50} d-block d-md-none`}>
           <div className="d-flex justify-content-center">
             <Image
-              src={"Process1.png"}
+              src={"/movement-undercommons/Process1.png"}
               height={250}
               width={250}
               alt="Image 1"
@@ -151,7 +151,7 @@ export default function Process() {
         <div className={`${styles.marginTop50} d-block d-md-none`}>
           <div className="d-flex justify-content-center">
             <Image
-              src={"Process2.png"}
+              src={"/movement-undercommons/Process2.png"}
               height={250}
               width={250}
               alt="Image 2"
@@ -164,7 +164,7 @@ export default function Process() {
               {/* third middle image */}
               <div className="d-flex justify-content-center">
                 <Image
-                  src={"Process3.png"}
+                  src={"/movement-undercommons/Process3.png"}
                   height={250}
                   width={250}
                   alt="Image 3"
@@ -365,7 +365,7 @@ export default function Process() {
               padding: 0,
             }}
           >
-            <img src={"Process4.png"} alt="Image 1" width={"100%"} />
+            <img src={"/movement-undercommons/Process4.png"} alt="Image 1" width={"100%"} />
           </div>
           <div className="col-12 col-lg-5">
             <div
