@@ -1,3 +1,4 @@
+import Image from "next/image";
 import HeaderBar from "../Components/HeaderBar";
 import styles from "./Process.module.css";
 
@@ -39,7 +40,7 @@ const placeholderPublications = [
   },
 ];
 
-const Publication = ({ title, description, ref }) => {
+const Publication = ({ title, description }) => {
   return (
     <div style={{ marginBottom: "30px" }}>
       <h3 className="abolitionRegular" style={{ marginBottom: "0" }}>
@@ -93,29 +94,28 @@ export default function Process() {
           <div className="col-12 col-lg-5" />
         </div>
 
-        <div className={`${styles.marginTop50} row`}>
+        <div className={`${styles.marginTop50} row d-none d-md-flex`}>
           <div className="col-12 col-lg-7" style={{ paddingRight: "0" }}>
             {/* top 2 images */}
             <div className="d-flex justify-content-between flex-wrap">
-              <div
-                style={{
-                  width: "250px",
-                  height: "250px",
-                  backgroundColor: "grey",
-                  border: "2px solid black",
-                }}
+              <Image
+                src={"Process1.png"}
+                height={250}
+                width={250}
+                alt="Image 1"
               />
-              <div
-                style={{
-                  width: "250px",
-                  height: "250px",
-                  backgroundColor: "grey",
-                  border: "2px solid black",
-                }}
+              <Image
+                src={"Process2.png"}
+                height={250}
+                width={250}
+                alt="Image 2"
               />
             </div>
           </div>
-          <div className="col-12 col-lg-5" style={{ paddingLeft: "0" }}>
+          <div
+            className="d-none d-lg-block col-lg-5"
+            style={{ paddingLeft: "0" }}
+          >
             {/* image descriptions */}
             <div
               className="altText"
@@ -138,23 +138,66 @@ export default function Process() {
             </div>
           </div>
         </div>
+        <div className={`${styles.marginTop50} d-block d-md-none`}>
+          <div className="d-flex justify-content-center">
+            <Image
+              src={"Process1.png"}
+              height={250}
+              width={250}
+              alt="Image 1"
+            />
+          </div>
+        </div>
+        <div className={`${styles.marginTop50} d-block d-md-none`}>
+          <div className="d-flex justify-content-center">
+            <Image
+              src={"Process2.png"}
+              height={250}
+              width={250}
+              alt="Image 2"
+            />
+          </div>
+        </div>
         <div className={`${styles.marginTop50} row`}>
           <div className="col-12 col-lg-7">
             <div className="d-flex justify-content-center align-items-center">
               {/* third middle image */}
               <div className="d-flex justify-content-center">
-                <div
-                  style={{
-                    width: "250px",
-                    height: "250px",
-                    backgroundColor: "grey",
-                    border: "2px solid black",
-                  }}
+                <Image
+                  src={"Process3.png"}
+                  height={250}
+                  width={250}
+                  alt="Image 3"
                 />
               </div>
             </div>
           </div>
           <div className="col-12 col-lg-5" />
+        </div>
+        <div
+          className="d-flex d-lg-none col-12 justify-content-center"
+          style={{ paddingLeft: "0" }}
+        >
+          {/* image descriptions */}
+          <div
+            className="altText"
+            style={{
+              width: "250px",
+              textAlign: "start",
+              paddingTop: "10px",
+              borderLeft: "2px solid black",
+              paddingLeft: "15px",
+            }}
+          >
+            Image 1: Drawing a Dragon, South African Muralist in Phoenix, AZ
+            (2022)
+            <br />
+            <br />
+            Image 2: Portrait of Crossing Guard [still], Cambridge, MA (2023)
+            <br />
+            <br />
+            Image 3: Untitled#2 (Dancing quadrant sketch), (2021)
+          </div>
         </div>
 
         <h4
@@ -314,13 +357,25 @@ export default function Process() {
           <div
             className="col-12 col-lg-7"
             style={{
-              backgroundColor: "grey",
-              border: "2px solid black",
-              height: "445px",
+              display: "flex",
+              justifyContent: "center",
+              alignContent: "flex-start",
+              overflow: "hidden",
+              border: "4px solid black",
+              padding: 0,
             }}
-          ></div>
+          >
+            <img src={"Process4.png"} alt="Image 1" width={"100%"} />
+          </div>
           <div className="col-12 col-lg-5">
-            <div className={`altText`} style={{ width: "250px" }}>
+            <div
+              className={`altText`}
+              style={{ width: "250px", marginLeft: "-12px" }}
+            >
+              <div
+                className="d-block d-lg-none"
+                style={{ marginTop: "15px" }}
+              />
               <p>Image 1: Untitled sketch#1, [still] Phoenix, Arizona (2021)</p>
             </div>
           </div>
@@ -416,7 +471,7 @@ export default function Process() {
       </div>
 
       <HeaderBar
-        text="PUBLICATIONS"
+        text="PUBLICATIONS AND PRESS"
         backgroundColors={["var(--burnt-orange)"]}
         textColors={["var(--light-blue)"]}
         underlineColors={["var(--dark-teal)"]}

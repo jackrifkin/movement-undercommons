@@ -1,0 +1,15 @@
+.contentContainer {
+  padding: 80px 60px;
+}
+
+.teamContainer {
+  margin-bottom: 40px;
+}
+
+.teamLink {
+  color: var(--lavender);
+}
+
+.teamLink:hover {
+  color: var(--temptress);
+}

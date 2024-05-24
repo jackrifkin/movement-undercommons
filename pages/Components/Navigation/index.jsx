@@ -20,7 +20,7 @@ const HoverMenu = ({
       className={`${styles.hoverFlexContainer} d-none d-lg-flex`}
       style={{
         top: `${containerDisplacement}px`,
-        transition: "top 0.45s ease-in-out",
+        transition: "top 0.3s ease-in-out",
       }}
       onMouseLeave={handleMouseLeave}
     >
@@ -34,6 +34,12 @@ const HoverMenu = ({
             className={`${styles.hoverMenuText} abolitionRegular`}
           >
             Portraits
+          </Link>
+          <Link
+            href="/Team"
+            className={`${styles.hoverMenuText} abolitionRegular`}
+          >
+            Team
           </Link>
           <Link
             href="/Process"
@@ -50,7 +56,7 @@ const HoverMenu = ({
           position: "absolute",
           left: "0",
           top: `${wordmarkDisplacement}px`,
-          transition: "top 0.45s ease-in-out",
+          transition: "top 0.3s ease-in-out",
           flex: "1",
         }}
       >

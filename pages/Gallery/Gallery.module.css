@@ -3,63 +3,88 @@
   background-color: var(--vegas-gold);
 }
 
-.galleryContainer {
-  margin: 0;
-  border-top: 2px solid black;
-}
-
 .filterContainer {
-  border-right: 2px solid black;
-  padding: 0;
-}
-
-.filterButton {
-  background-color: var(--light-blue);
-  border-bottom: 2px solid var(--burnt-orange);
-  height: 60px;
-  padding-left: 25px;
+  background-color: var(--lavender);
+  height: 55px;
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
+.filterLabel {
+  margin-left: 28px;
+  margin-right: 20px;
+  margin-top: 8px;
+  user-select: none;
+}
+
+.filterButton {
+  display: inline;
+  background-color: var(--cosmic-latte);
+  width: auto;
+  height: auto;
+  margin-right: 15px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
 .filterText {
   margin: 0;
   color: var(--temptress);
+  user-select: none;
+  font-size: 1.2em;
 }
 
 .portraitsContainer {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  padding: 30px 25px 30px 50px;
-  overflow-y: hidden;
-  overflow-y: scroll;
-  height: 100%;
-  justify-content: stretch;
+  padding: 50px 25px 30px 50px;
+  justify-content: space-around;
+  border-top: 2px solid black;
+  margin: 0;
 }
 
 .portraitContainer {
-  width: 300px;
-  margin-bottom: 30px;
-  margin-right: 25px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 40px 20px;
+  align-items: center;
 }
 
-.portraitThumbnailContainer,
-.portraitLabel {
+.thumbnail,
+.portraitLabelText {
   cursor: pointer;
 }
 
+/* TODO: get hover animation working with images of different aspect ratios */
+/* .thumbnail {
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.thumbnail:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+} */
+
 .portraitThumbnailContainer {
-  height: 60vh;
+  height: 50vh;
   max-height: 600px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow-x: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.portraitLabel:hover {
+/* .portraitThumbnailContainer:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+} */
+
+.portraitLabelText:hover {
   text-decoration: underline;
 }
