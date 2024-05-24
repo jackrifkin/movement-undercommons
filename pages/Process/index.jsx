@@ -4,47 +4,48 @@ import styles from "./Process.module.css";
 
 const placeholderPublications = [
   {
-    title: "TITLE OF PUBLICATION",
+    title: "Jacob's Pillow",
     description:
-      "Ab quia pariatur sed consequuntur recusandae sit velit perspiciatis? by Author Name",
+      "A short film made by the Jacob's Pillow team",
+    link: "https://watch.jacobspillow.org/detail/videos/inside-the-pillow-lab/video/6340364188112?autoStart=true",
   },
   {
-    title: "ANOTHER PUBLICATION",
+    title: "Dance Magazine",
     description:
-      "Ab quia pariatur sed consequuntur recusandae sit velit perspiciatis? by Author Name",
+      "Press from Dance Magazine",
+    link: "https://www.dancemagazine.com/choreo-robotics/",
   },
   {
-    title: "PUBLICATION #3",
+    title: "36 Walk: a case study of reciprocity in movement and computation",
     description:
-      "Ab quia pariatur sed consequuntur recusandae sit velit perspiciatis? by Author Name",
+      "A case study paper by Grisha Coleman and Daragh Byrne",
+    link: "/movement-undercommons/Publications/36Walk.pdf",
   },
   {
-    title: "YET ANOTHER PUBLICATION",
+    title: "The Movement Undercommons",
     description:
-      "Ab quia pariatur sed consequuntur recusandae sit velit perspiciatis? by Author Name",
+      "Movement analysis as meaning making in a time of global migrations\nby Grisha Coleman",
+    link: "/movement-undercommons/Publications/MovementUndercommons.pdf"
   },
   {
-    title: "THIS IS ALSO A PUBLICATION",
+    title: "Motion, Captured",
     description:
-      "Ab quia pariatur sed consequuntur recusandae sit velit perspiciatis? by Author Name",
+      "An open repository for comparative movement studies\nby Grisha Coleman & Co.",
+    link: "/movement-undercommons/Publications/Motion, Captured.pdf"
   },
   {
-    title: "VERY VERY VERY VERY VERY VERY VERY LOOOOOOOOOOONG TITLE",
+    title: "Decolonizing the Machine",
     description:
-      "Ab quia pariatur sed consequuntur recusandae sit velit perspiciatis? by Author Name",
-  },
-  {
-    title: "SHORT TITLE",
-    description:
-      "Ab quia pariatur sed consequuntur recusandae sit velit perspiciatis? by Author Name",
+      "Decolonizing the Machine: Race, Gender, and Disability in Robots and Algorithmic Art\nby Grisha Coleman & Co.",
+    link: "/movement-undercommons/Publications/DECOLONIZING_THE_MACHINE.pdf"
   },
 ];
 
-const Publication = ({ title, description }) => {
+const Publication = ({ title, description, link }) => {
   return (
     <div style={{ marginBottom: "30px" }}>
       <h3 className="abolitionRegular" style={{ marginBottom: "0" }}>
-        {title}
+        <a className={styles.publicationLink} href={link} target="_blank">{title}</a>
       </h3>
       <p>{description}</p>
     </div>
@@ -480,7 +481,7 @@ export default function Process() {
 
       <div className={`contentContainer`}>
         <div className="row">
-          <div className="col">
+          <div className="col-12 col-md-5">
             {placeholderPublications
               .slice(0, Math.ceil(placeholderPublications.length / 2))
               .map((publication) => {
@@ -488,12 +489,13 @@ export default function Process() {
                   <Publication
                     title={publication.title}
                     description={publication.description}
+                    link={publication.link}
                   />
                 );
               })}
           </div>
           <div className="col-2" />
-          <div className="col">
+          <div className="col-12 col-md-5">
             {placeholderPublications
               .slice(Math.ceil(placeholderPublications.length / 2))
               .map((publication) => {
@@ -501,6 +503,7 @@ export default function Process() {
                   <Publication
                     title={publication.title}
                     description={publication.description}
+                    link={publication.link}
                   />
                 );
               })}

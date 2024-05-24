@@ -6,3 +6,7 @@
 .marginTop50 {
   margin-top: 50px;
 }
+
+.publicationLink:hover {
+  text-decoration: underline !important;
+}
