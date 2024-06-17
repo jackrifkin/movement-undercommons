@@ -3,10 +3,21 @@ import Wordmark from "./Components/Wordmark";
 import HeaderBar from "./Components/HeaderBar";
 import VideoWithToolbar from "./Components/VideoWithToolbar";
 import { useMediaQuery } from "react-responsive";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  const isXsScreen = useMediaQuery({ maxWidth: 500 });
-  const isGalaxyFold = useMediaQuery({ maxWidth: 340 });
+  const [isXsScreen, setIsXsScreen] = useState(false)
+  const [isGalaxyFold, setIsGalaxyFold] = useState(false)
+  const xsScreenQuery = useMediaQuery({ maxWidth: 500 });
+  const galaxyFoldQuery = useMediaQuery({ maxWidth: 340 });
+
+  useEffect(() => {
+    setIsXsScreen(xsScreenQuery)
+  }, [xsScreenQuery])
+
+  useEffect(() => {
+    setIsGalaxyFold(galaxyFoldQuery)
+  }, [galaxyFoldQuery])
 
   return (
     <>
