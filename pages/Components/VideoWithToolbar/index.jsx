@@ -30,6 +30,7 @@ const VideoWithToolbar = ({ src, loops = true, hasToolbar = true }) => {
 
   const toggleFullscreen = () => {
     const videoElement = videoRef.current;
+    videoElement.playsInline = !videoElement.playsInline;
     if (!document.fullscreenElement) {
       videoElement.requestFullscreen();
     } else {
@@ -67,6 +68,7 @@ const VideoWithToolbar = ({ src, loops = true, hasToolbar = true }) => {
   useEffect(() => {
     const videoElement = videoRef.current;
     if (videoElement) {
+      setIsMuted(videoElement.muted)
       videoElement.addEventListener("loadedmetadata", calculateVideoDimensions);
       window.addEventListener("resize", calculateVideoDimensions);
       document.addEventListener("fullscreenchange", handleFullScreenChange);
