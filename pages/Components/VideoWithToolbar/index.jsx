@@ -30,7 +30,7 @@ const VideoWithToolbar = ({ src, loops = true, hasToolbar = true }) => {
 
   const toggleFullscreen = () => {
     const videoElement = videoRef.current;
-    videoElement.playsInline = !videoElement.playsInline;
+    videoElement.playsInline = false;
     if (!document.fullscreenElement) {
       videoElement.requestFullscreen();
     } else {
@@ -41,6 +41,8 @@ const VideoWithToolbar = ({ src, loops = true, hasToolbar = true }) => {
 
   const handleFullScreenChange = () => {
     if (!document.fullscreenElement) {
+      setIsFullscreen(false)
+      videoRef.current.playsInline = true;
       calculateVideoDimensions();
     }
   };
@@ -95,7 +97,7 @@ const VideoWithToolbar = ({ src, loops = true, hasToolbar = true }) => {
           controls={false}
           autoPlay
           loop={loops}
-          playsInline={!isFullscreen}
+          playsInline
           disableRemotePlayback
           muted={!hasToolbar}
           onClick={togglePlay}
