@@ -5,39 +5,36 @@ import styles from "./Process.module.css";
 const placeholderPublications = [
   {
     title: "Jacob's Pillow",
-    description:
-      "A short film made by the Jacob's Pillow team",
+    description: "A short film made by the Jacob's Pillow team",
     link: "https://watch.jacobspillow.org/detail/videos/inside-the-pillow-lab/video/6340364188112?autoStart=true",
   },
   {
     title: "Dance Magazine",
-    description:
-      "Press from Dance Magazine",
+    description: "Press from Dance Magazine",
     link: "https://www.dancemagazine.com/choreo-robotics/",
   },
   {
     title: "36 Walk: a case study of reciprocity in movement and computation",
-    description:
-      "A case study paper by Grisha Coleman and Daragh Byrne",
+    description: "A case study paper by Grisha Coleman and Daragh Byrne",
     link: "/movement-undercommons/Publications/36Walk.pdf",
   },
   {
     title: "The Movement Undercommons",
     description:
       "Movement analysis as meaning making in a time of global migrations\nby Grisha Coleman",
-    link: "/movement-undercommons/Publications/MovementUndercommons.pdf"
+    link: "/movement-undercommons/Publications/MovementUndercommons.pdf",
   },
   {
     title: "Motion, Captured",
     description:
       "An open repository for comparative movement studies\nby Grisha Coleman & Co.",
-    link: "/movement-undercommons/Publications/Motion, Captured.pdf"
+    link: "/movement-undercommons/Publications/Motion, Captured.pdf",
   },
   {
     title: "Decolonizing the Machine",
     description:
       "Decolonizing the Machine: Race, Gender, and Disability in Robots and Algorithmic Art\nby Grisha Coleman & Co.",
-    link: "/movement-undercommons/Publications/DECOLONIZING_THE_MACHINE.pdf"
+    link: "/movement-undercommons/Publications/DECOLONIZING_THE_MACHINE.pdf",
   },
 ];
 
@@ -45,7 +42,9 @@ const Publication = ({ title, description, link }) => {
   return (
     <div style={{ marginBottom: "30px" }}>
       <h3 className="abolitionRegular" style={{ marginBottom: "0" }}>
-        <a className={styles.publicationLink} href={link} target="_blank">{title}</a>
+        <a className={styles.publicationLink} href={link} target="_blank">
+          {title}
+        </a>
       </h3>
       <p>{description}</p>
     </div>
@@ -366,12 +365,16 @@ export default function Process() {
               padding: 0,
             }}
           >
-            <img src={"/movement-undercommons/Process4.png"} alt="Image 1" width={"100%"} />
+            <img
+              src={"/movement-undercommons/Process4.png"}
+              alt="Image 1"
+              width={"100%"}
+            />
           </div>
           <div className="col-12 col-lg-5">
             <div
               className={`${styles.altText} altText`}
-              style={{ width: "250px"}}
+              style={{ width: "250px" }}
             >
               <p>Image 1: Untitled sketch#1, [still] Phoenix, Arizona (2021)</p>
             </div>

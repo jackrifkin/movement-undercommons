@@ -30,7 +30,9 @@ export default function Portrait() {
     <>
       <div className={`${styles.videoPlayerContainer}`}>
         <div className={`${styles.videoPlayer}`}>
-          <VideoWithToolbar src={`/movement-undercommons/Portraits/${currentPortrait?.filePath}`} />
+          <VideoWithToolbar
+            src={`/movement-undercommons/Portraits/${currentPortrait?.filePath}`}
+          />
         </div>
       </div>
       <div className={`${styles.videoDescriptionContainer}`}>

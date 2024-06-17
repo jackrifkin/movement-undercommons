@@ -67,13 +67,13 @@ export default function Gallery() {
             ...prevMap,
             [`label_${index}`]: thumbnailWidth,
           }));
-          minWidth = Math.min(minWidth, thumbnailWidth)
+          minWidth = Math.min(minWidth, thumbnailWidth);
         } else {
           setLabelWidths((prevMap) => ({
             ...prevMap,
             [`label_${index}`]: containerWidth,
           }));
-          minWidth = Math.min(minWidth, containerWidth)
+          minWidth = Math.min(minWidth, containerWidth);
         }
       }
     });
@@ -146,7 +146,7 @@ export default function Gallery() {
                   id={`container_${index}`}
                   className={`${styles.portraitThumbnailContainer}`}
                   onClick={handleClick}
-                  style={maxPortraitWidth ? {maxWidth: maxPortraitWidth} : {}}
+                  style={maxPortraitWidth ? { maxWidth: maxPortraitWidth } : {}}
                 >
                   <Thumbnail
                     id={`thumbnail_${index}`}
@@ -156,7 +156,11 @@ export default function Gallery() {
                 </div>
                 <h3
                   className={`${styles.portraitLabel} abolitionRegular`}
-                  style={{width: labelWidths[`label_${index}`], ...(maxPortraitWidth && { maxWidth: maxPortraitWidth }) }}>
+                  style={{
+                    width: labelWidths[`label_${index}`],
+                    ...(maxPortraitWidth && { maxWidth: maxPortraitWidth }),
+                  }}
+                >
                   <span
                     onClick={handleClick}
                     className={styles.portraitLabelText}

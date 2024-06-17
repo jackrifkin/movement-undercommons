@@ -11,32 +11,35 @@ export default function Home() {
   return (
     <>
       <div className={styles.videoPlayer}>
-        <VideoWithToolbar src={"/movement-undercommons/orange.mp4"} hasToolbar={false} />
+        <VideoWithToolbar
+          src={"/movement-undercommons/orange.mp4"}
+          hasToolbar={false}
+        />
       </div>
 
       <div className={`contentContainer`}>
         <div className="row">
           <div className="col">
             <div className={`d-none d-lg-flex`}>
-                <Wordmark
-                  color={"var(--temptress)"}
-                  width={"500px"}
-                  style={{ zIndex: "10" }}
-                />
+              <Wordmark
+                color={"var(--temptress)"}
+                width={"500px"}
+                style={{ zIndex: "10" }}
+              />
             </div>
             <div className={`d-lg-none`}>
               {isXsScreen ? (
-                  <Wordmark
-                    color={"var(--temptress)"}
-                    width={isGalaxyFold ? "200px" : "275px"}
-                    style={{ zIndex: "10" }}
-                  />
+                <Wordmark
+                  color={"var(--temptress)"}
+                  width={isGalaxyFold ? "200px" : "275px"}
+                  style={{ zIndex: "10" }}
+                />
               ) : (
-                  <Wordmark
-                    color={"var(--temptress)"}
-                    width={"400px"}
-                    style={{ zIndex: "10" }}
-                  />
+                <Wordmark
+                  color={"var(--temptress)"}
+                  width={"400px"}
+                  style={{ zIndex: "10" }}
+                />
               )}
             </div>
             <p style={{ marginTop: "10px" }}>
@@ -83,7 +86,10 @@ export default function Home() {
       />
 
       <div className={`contentContainer`}>
-        <div className={`row d-block d-lg-none`} style={{ margin: "30px 20px 0 20px" }}>
+        <div
+          className={`row d-block d-lg-none`}
+          style={{ margin: "30px 20px 0 20px" }}
+        >
           <h1
             className={`abolitionRegular col-lg-2 col-12`}
             style={{
@@ -129,7 +135,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={`row d-none d-lg-flex`} style={{ margin: "30px 20px 0 20px" }}>
+        <div
+          className={`row d-none d-lg-flex`}
+          style={{ margin: "30px 20px 0 20px" }}
+        >
           <div className="col" />
           <h1
             className={`abolitionRegular col-lg-2 col-12`}

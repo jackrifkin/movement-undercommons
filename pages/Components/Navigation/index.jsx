@@ -72,10 +72,16 @@ const HoverMenu = ({
   );
 };
 
-const ExpandedMenuMobile = ({isVisible, menuButtonFontSize, isXsScreen, isGalaxyFold, setMenuExpanded}) => {
+const ExpandedMenuMobile = ({
+  isVisible,
+  menuButtonFontSize,
+  isXsScreen,
+  isGalaxyFold,
+  setMenuExpanded,
+}) => {
   const handleCollapse = () => {
-    setMenuExpanded(false)
-  }
+    setMenuExpanded(false);
+  };
   return (
     <div
       className={`d-block d-lg-none ${styles.expandedMenuMobile} ${isVisible ? styles.visible : ""}`}
@@ -108,7 +114,7 @@ const ExpandedMenuMobile = ({isVisible, menuButtonFontSize, isXsScreen, isGalaxy
               style={{
                 marginRight: "25px",
                 color: "var(--cosmic-latte)",
-                fontSize: `${menuButtonFontSize + 5}px`
+                fontSize: `${menuButtonFontSize + 5}px`,
               }}
               onClick={handleCollapse}
             >
@@ -117,14 +123,32 @@ const ExpandedMenuMobile = ({isVisible, menuButtonFontSize, isXsScreen, isGalaxy
           </div>
         </div>
         <div className={`${styles.expandedMenuLabelsContainer}`}>
-          <Link href="/Gallery" className={`${styles.expandedMenuText} abolitionRegular`} onClick={handleCollapse}>Portraits</Link>
-          <Link href="/Team" className={`${styles.expandedMenuText} abolitionRegular`} onClick={handleCollapse}>Team</Link>
-          <Link href="/Process" className={`${styles.expandedMenuText} abolitionRegular`} onClick={handleCollapse}>Process</Link>
+          <Link
+            href="/Gallery"
+            className={`${styles.expandedMenuText} abolitionRegular`}
+            onClick={handleCollapse}
+          >
+            Portraits
+          </Link>
+          <Link
+            href="/Team"
+            className={`${styles.expandedMenuText} abolitionRegular`}
+            onClick={handleCollapse}
+          >
+            Team
+          </Link>
+          <Link
+            href="/Process"
+            className={`${styles.expandedMenuText} abolitionRegular`}
+            onClick={handleCollapse}
+          >
+            Process
+          </Link>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default function Navigation() {
   const [containerDisplacement, setContainerDisplacement] = useState(130);
@@ -143,7 +167,7 @@ export default function Navigation() {
 
   const handleExpand = () => {
     setMenuExpanded(!menuExpanded);
-  }
+  };
 
   return (
     <div>
@@ -160,11 +184,7 @@ export default function Navigation() {
             </Link>
           </div>
           <div className={styles.menuLabelContainer}>
-            <h1
-              className={`${styles.menuLabel} abolitionRegular`}
-            >
-              Menu
-            </h1>
+            <h1 className={`${styles.menuLabel} abolitionRegular`}>Menu</h1>
           </div>
         </div>
         <HoverMenu
@@ -203,7 +223,7 @@ export default function Navigation() {
               style={{
                 marginRight: "20px",
                 color: "white",
-                fontSize: `${menuButtonFontSize}px`
+                fontSize: `${menuButtonFontSize}px`,
               }}
               onClick={handleExpand}
             >
@@ -212,7 +232,13 @@ export default function Navigation() {
           </div>
         </div>
       </div>
-      <ExpandedMenuMobile isVisible={menuExpanded} menuButtonFontSize={menuButtonFontSize} isGalaxyFold={isGalaxyFold} isXsScreen={isXsScreen} setMenuExpanded={setMenuExpanded}/>
+      <ExpandedMenuMobile
+        isVisible={menuExpanded}
+        menuButtonFontSize={menuButtonFontSize}
+        isGalaxyFold={isGalaxyFold}
+        isXsScreen={isXsScreen}
+        setMenuExpanded={setMenuExpanded}
+      />
     </div>
   );
 }

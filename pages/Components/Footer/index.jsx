@@ -103,7 +103,11 @@ export default function Footer() {
               {socialTag}
             </h4>
           </div>
-          <Image src="/movement-undercommons/FAILSPACE_logo.png" width={25} height={25} />
+          <Image
+            src="/movement-undercommons/FAILSPACE_logo.png"
+            width={25}
+            height={25}
+          />
         </div>
         <HoverFooter
           containerDisplacement={containerDisplacement}

@@ -107,14 +107,22 @@ const VideoWithToolbar = ({ src, loops = true, hasToolbar = true }) => {
         <div className={`${styles.videoToolBar}`}>
           <Image
             className={styles.icon}
-            src={isPlaying ? "/movement-undercommons/Pause.svg" : "/movement-undercommons/Play.svg"}
+            src={
+              isPlaying
+                ? "/movement-undercommons/Pause.svg"
+                : "/movement-undercommons/Play.svg"
+            }
             width={30}
             height={30}
             onClick={togglePlay}
           />
           <Image
             className={styles.icon}
-            src={isMuted ? "/movement-undercommons/Muted.svg" : "/movement-undercommons/Volume.svg"}
+            src={
+              isMuted
+                ? "/movement-undercommons/Muted.svg"
+                : "/movement-undercommons/Volume.svg"
+            }
             width={38}
             height={38}
             onClick={toggleMute}
