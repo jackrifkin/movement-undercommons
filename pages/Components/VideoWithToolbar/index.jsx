@@ -1,6 +1,7 @@
 import styles from "./VideoWithToolbar.module.css";
 import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
+import { useMediaQuery } from "react-responsive";
 
 const VideoWithToolbar = ({ src, loops = true, hasToolbar = true }) => {
   const videoRef = useRef(null);
@@ -11,6 +12,9 @@ const VideoWithToolbar = ({ src, loops = true, hasToolbar = true }) => {
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const isMobileQuery = useMediaQuery({ maxWidth: 992 });
 
   const togglePlay = () => {
     const videoElement = videoRef.current;
@@ -88,6 +92,10 @@ const VideoWithToolbar = ({ src, loops = true, hasToolbar = true }) => {
     }
   }, [src]);
 
+  useEffect(() => {
+    setIsMobile(isMobileQuery);
+  }, [isMobileQuery])
+
   return (
     <div className={styles.videoContainer}>
       <div className={styles.videoWrapper}>
@@ -135,13 +143,13 @@ const VideoWithToolbar = ({ src, loops = true, hasToolbar = true }) => {
             height={38}
             onClick={toggleMute}
           />
-          <Image
+          {!isMobile && <Image
             className={styles.icon}
             src={"/movement-undercommons/Full Screen.svg"}
             width={38}
             height={38}
             onClick={toggleFullscreen}
-          />
+          />}
         </div>
       )}
     </div>
