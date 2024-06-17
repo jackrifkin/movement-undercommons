@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Navigation.module.css";
 import Wordmark from "../Wordmark";
 import Link from "next/link";
@@ -154,11 +154,21 @@ export default function Navigation() {
   const [containerDisplacement, setContainerDisplacement] = useState(130);
   const [wordmarkDisplacement, setWordmarkDisplacement] = useState(-130);
   const [menuExpanded, setMenuExpanded] = useState(false);
+  const [isXsScreen, setIsXsScreen] = useState(false)
+  const [isGalaxyFold, setIsGalaxyFold] = useState(false)
 
-  const isXsScreen = useMediaQuery({ maxWidth: 500 });
-  const isGalaxyFold = useMediaQuery({ maxWidth: 340 });
   let menuButtonFontSize = isXsScreen ? 45 : 55;
   menuButtonFontSize = isGalaxyFold ? 35 : menuButtonFontSize;
+
+  const xsScreenQuery = useMediaQuery({ maxWidth: 500 });
+  const galaxyFoldQuery = useMediaQuery({ maxWidth: 340 });
+  useEffect(() => {
+    setIsXsScreen(xsScreenQuery)
+  }, [xsScreenQuery])
+
+  useEffect(() => {
+    setIsGalaxyFold(galaxyFoldQuery)
+  }, [galaxyFoldQuery])
 
   const handleMouseEnter = () => {
     setContainerDisplacement(0);
