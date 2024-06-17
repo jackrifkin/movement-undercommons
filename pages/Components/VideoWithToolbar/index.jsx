@@ -93,7 +93,7 @@ const VideoWithToolbar = ({ src, loops = true, hasToolbar = true }) => {
           controls={false}
           autoPlay
           loop={loops}
-          playsInline={isFullscreen}
+          playsInline={!isFullscreen}
           disableRemotePlayback
           muted={!hasToolbar}
           onClick={togglePlay}
