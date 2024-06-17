@@ -77,6 +77,7 @@ const VideoWithToolbar = ({ src, loops = true, hasToolbar = true }) => {
           calculateVideoDimensions,
         );
         window.removeEventListener("resize", calculateVideoDimensions);
+        document.removeEventListener("fullscreenchange", handleFullScreenChange)
       };
     }
   }, [src]);
@@ -90,6 +91,7 @@ const VideoWithToolbar = ({ src, loops = true, hasToolbar = true }) => {
           controls={false}
           autoPlay
           loop={loops}
+          playsInline
           disableRemotePlayback
           muted
           onClick={togglePlay}
