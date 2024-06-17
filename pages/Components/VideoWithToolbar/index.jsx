@@ -10,6 +10,7 @@ const VideoWithToolbar = ({ src, loops = true, hasToolbar = true }) => {
   });
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   const togglePlay = () => {
     const videoElement = videoRef.current;
@@ -34,6 +35,7 @@ const VideoWithToolbar = ({ src, loops = true, hasToolbar = true }) => {
     } else {
       document.exitFullscreen();
     }
+    setIsFullscreen(!isFullscreen)
   };
 
   const handleFullScreenChange = () => {
@@ -91,9 +93,9 @@ const VideoWithToolbar = ({ src, loops = true, hasToolbar = true }) => {
           controls={false}
           autoPlay
           loop={loops}
-          playsInline
+          playsInline={isFullscreen}
           disableRemotePlayback
-          muted
+          muted={!hasToolbar}
           onClick={togglePlay}
           className={styles.video}
           disablePictureInPicture
