@@ -72,77 +72,147 @@ const HoverMenu = ({
   );
 };
 
+const ExpandedMenuMobile = ({isVisible, menuButtonFontSize, isXsScreen, isGalaxyFold, setMenuExpanded}) => {
+  const handleCollapse = () => {
+    setMenuExpanded(false)
+  }
+  return (
+    <div
+      className={`d-block d-lg-none ${styles.expandedMenuMobile} ${isVisible ? styles.visible : ""}`}
+    >
+      <div className={styles.expandedMenuContent}>
+        <div className={styles.flexContainerMobile}>
+          <div className={`${styles.wordmarkContainerMobile}`}>
+            {isXsScreen ? (
+              <Link href="/" onClick={handleCollapse}>
+                <Wordmark
+                  color={"var(--temptress)"}
+                  width={isGalaxyFold ? "200px" : "275px"}
+                  height={isGalaxyFold ? "31.25px" : "42.96875px"}
+                  style={{ zIndex: "10" }}
+                />
+              </Link>
+            ) : (
+              <Link href="/" onClick={handleCollapse}>
+                <Wordmark
+                  color={"var(--temptress)"}
+                  width={"350px"}
+                  height={"56.6875px"}
+                  style={{ zIndex: "10" }}
+                />
+              </Link>
+            )}
+          </div>
+          <div className={styles.menuLabelContainer}>
+            <div
+              style={{
+                marginRight: "25px",
+                color: "var(--cosmic-latte)",
+                fontSize: `${menuButtonFontSize + 5}px`
+              }}
+              onClick={handleCollapse}
+            >
+              -
+            </div>
+          </div>
+        </div>
+        <div className={`${styles.expandedMenuLabelsContainer}`}>
+          <Link href="/Gallery" className={`${styles.expandedMenuText} abolitionRegular`} onClick={handleCollapse}>Portraits</Link>
+          <Link href="/Team" className={`${styles.expandedMenuText} abolitionRegular`} onClick={handleCollapse}>Team</Link>
+          <Link href="/Process" className={`${styles.expandedMenuText} abolitionRegular`} onClick={handleCollapse}>Process</Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Navigation() {
   const [containerDisplacement, setContainerDisplacement] = useState(130);
   const [wordmarkDisplacement, setWordmarkDisplacement] = useState(-130);
+  const [menuExpanded, setMenuExpanded] = useState(false);
 
   const isXsScreen = useMediaQuery({ maxWidth: 500 });
   const isGalaxyFold = useMediaQuery({ maxWidth: 340 });
-  let menuIconSize = isXsScreen ? 14 : 17;
-  menuIconSize = isGalaxyFold ? 12 : menuIconSize;
+  let menuButtonFontSize = isXsScreen ? 45 : 55;
+  menuButtonFontSize = isGalaxyFold ? 35 : menuButtonFontSize;
 
   const handleMouseEnter = () => {
     setContainerDisplacement(0);
     setWordmarkDisplacement(0);
   };
 
+  const handleExpand = () => {
+    setMenuExpanded(!menuExpanded);
+  }
+
   return (
-    <div className={styles.container}>
-      <div className={styles.flexContainer} onMouseEnter={handleMouseEnter}>
-        <div className={`${styles.wordmarkContainer} d-none d-lg-flex`}>
-          <Link href="/">
-            <Wordmark
-              color={"var(--maize)"}
-              width={"500px"}
-              height={"78.125px"}
-              style={{ zIndex: "10" }}
-            />
-          </Link>
-        </div>
-        <div className={`${styles.wordmarkContainerMobile} d-lg-none`}>
-          {isXsScreen ? (
+    <div>
+      <div className={`${styles.container} d-none d-lg-block`}>
+        <div className={styles.flexContainer} onMouseEnter={handleMouseEnter}>
+          <div className={`${styles.wordmarkContainer} d-flex`}>
             <Link href="/">
               <Wordmark
                 color={"var(--maize)"}
-                width={isGalaxyFold ? "200px" : "275px"}
-                height={isGalaxyFold ? "31.25px" : "42.96875px"}
+                width={"500px"}
+                height={"78.125px"}
                 style={{ zIndex: "10" }}
               />
             </Link>
-          ) : (
-            <Link href="/">
-              <Wordmark
-                color={"var(--maize)"}
-                width={"350px"}
-                height={"56.6875px"}
-                style={{ zIndex: "10" }}
-              />
-            </Link>
-          )}
+          </div>
+          <div className={styles.menuLabelContainer}>
+            <h1
+              className={`${styles.menuLabel} abolitionRegular`}
+            >
+              Menu
+            </h1>
+          </div>
         </div>
-        <div className={styles.menuLabelContainer}>
-          <h1
-            className={`${styles.menuLabel} abolitionRegular d-none d-lg-block`}
-          >
-            Menu
-          </h1>
-          <div
-            className="d-block d-lg-none"
-            style={{
-              border: `${menuIconSize}px solid white`,
-              borderRadius: `${menuIconSize}px`,
-              marginBottom: "25px",
-              marginRight: "20px",
-            }}
-          ></div>
+        <HoverMenu
+          containerDisplacement={containerDisplacement}
+          setContainerDisplacement={setContainerDisplacement}
+          wordmarkDisplacement={wordmarkDisplacement}
+          setWordmarkDisplacement={setWordmarkDisplacement}
+        />
+      </div>
+      <div className={`${styles.container} d-block d-lg-none`}>
+        <div className={styles.flexContainer}>
+          <div className={`${styles.wordmarkContainerMobile}`}>
+            {isXsScreen ? (
+              <Link href="/">
+                <Wordmark
+                  color={"var(--maize)"}
+                  width={isGalaxyFold ? "200px" : "275px"}
+                  height={isGalaxyFold ? "31.25px" : "42.96875px"}
+                  style={{ zIndex: "10" }}
+                />
+              </Link>
+            ) : (
+              <Link href="/">
+                <Wordmark
+                  color={"var(--maize)"}
+                  width={"350px"}
+                  height={"56.6875px"}
+                  style={{ zIndex: "10" }}
+                />
+              </Link>
+            )}
+          </div>
+          <div className={styles.menuLabelContainer}>
+            <div
+              className="d-block d-lg-none"
+              style={{
+                marginRight: "20px",
+                color: "white",
+                fontSize: `${menuButtonFontSize}px`
+              }}
+              onClick={handleExpand}
+            >
+              +
+            </div>
+          </div>
         </div>
       </div>
-      <HoverMenu
-        containerDisplacement={containerDisplacement}
-        setContainerDisplacement={setContainerDisplacement}
-        wordmarkDisplacement={wordmarkDisplacement}
-        setWordmarkDisplacement={setWordmarkDisplacement}
-      />
+      <ExpandedMenuMobile isVisible={menuExpanded} menuButtonFontSize={menuButtonFontSize} isGalaxyFold={isGalaxyFold} isXsScreen={isXsScreen} setMenuExpanded={setMenuExpanded}/>
     </div>
   );
 }

@@ -11,7 +11,6 @@ const PORTRAITS_PER_PAGE = 12;
 const NO_MATCHING_FILTERS_MESSAGE =
   "It looks like there isn't a portrait that matches those filters...yet.\nHave an idea? Contact GrishaColeman@Example.com";
 
-// TODO: add 'float' hover animation + shadow
 const Thumbnail = ({ filePath, id, handlePageResize }) => {
   return (
     <img
@@ -27,10 +26,10 @@ const Thumbnail = ({ filePath, id, handlePageResize }) => {
 
 export default function Gallery() {
   const [hasMultiplePages, setHasMultiplePages] = useState(false);
-  const [bodyHeight, setBodyHeight] = useState(0);
   const [currentFilters, setCurrentFilters] = useState([]);
   const [currentPortraits, setCurrentPortraits] = useState(portraits);
   const [labelWidths, setLabelWidths] = useState({});
+  const [maxPortraitWidth, setMaxPortraitWidth] = useState(null);
 
   const router = useRouter();
 
@@ -42,40 +41,44 @@ export default function Gallery() {
     setCurrentPortraits(portraits);
     const needsMultiplePages = portraits?.length > PORTRAITS_PER_PAGE;
     setHasMultiplePages(needsMultiplePages);
-
-    const height = `calc(100vh - 130px - 70px${needsMultiplePages ? " - 30px" : ""})`;
-    setBodyHeight(height);
   }, [portraits]);
 
   useEffect(() => {
     const filteredPortraits = portraits.filter((portrait) =>
       currentFilters.every((filter) => portrait.filters?.includes(filter)),
     );
+    const needsMultiplePages = filteredPortraits.length > PORTRAITS_PER_PAGE;
+    setHasMultiplePages(needsMultiplePages);
     setCurrentPortraits(filteredPortraits);
   }, [currentFilters]);
 
   const handlePageResize = useCallback(() => {
+    let minWidth = Infinity;
     currentPortraits.forEach((_portrait, index) => {
       const thumbnailElement = document.getElementById(`thumbnail_${index}`);
       const containerElement = document.getElementById(`container_${index}`);
 
       if (thumbnailElement && containerElement) {
         const thumbnailWidth = thumbnailElement.offsetWidth;
-        const containerWidth = containerElement.offsetWidth - 40; // minus horizontal padding
+        const containerWidth = containerElement.offsetWidth;
 
         if (thumbnailWidth < containerWidth) {
           setLabelWidths((prevMap) => ({
             ...prevMap,
             [`label_${index}`]: thumbnailWidth,
           }));
+          minWidth = Math.min(minWidth, thumbnailWidth)
         } else {
           setLabelWidths((prevMap) => ({
             ...prevMap,
             [`label_${index}`]: containerWidth,
           }));
+          minWidth = Math.min(minWidth, containerWidth)
         }
       }
     });
+
+    setMaxPortraitWidth(minWidth);
   }, [currentPortraits]);
 
   useEffect(() => {
@@ -108,7 +111,7 @@ export default function Gallery() {
         {filters.map((filter) => (
           <div
             className={styles.filterButton}
-            onClick={(e) => handleFilterSelect(filter)}
+            onClick={(_e) => handleFilterSelect(filter)}
             style={
               isFilterSelected(filter)
                 ? {
@@ -137,12 +140,13 @@ export default function Gallery() {
           return (
             isVisible && (
               <div
-                id={`container_${index}`}
                 className={`${styles.portraitContainer} col-12 col-md-6 col-xl-4`}
               >
                 <div
+                  id={`container_${index}`}
                   className={`${styles.portraitThumbnailContainer}`}
                   onClick={handleClick}
+                  style={maxPortraitWidth ? {maxWidth: maxPortraitWidth} : {}}
                 >
                   <Thumbnail
                     id={`thumbnail_${index}`}
@@ -152,11 +156,7 @@ export default function Gallery() {
                 </div>
                 <h3
                   className={`${styles.portraitLabel} abolitionRegular`}
-                  style={{
-                    marginTop: "15px",
-                    width: labelWidths[`label_${index}`],
-                  }}
-                >
+                  style={{width: labelWidths[`label_${index}`], ...(maxPortraitWidth && { maxWidth: maxPortraitWidth }) }}>
                   <span
                     onClick={handleClick}
                     className={styles.portraitLabelText}

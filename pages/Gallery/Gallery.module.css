@@ -12,6 +12,12 @@
   align-items: center;
 }
 
+@media (max-width: 992px) {
+  .filterContainer {
+    overflow-x: scroll;
+  }
+}
+
 .filterLabel {
   margin-left: 28px;
   margin-right: 20px;
@@ -47,7 +53,7 @@
 .portraitContainer {
   display: flex;
   flex-direction: column;
-  padding: 0 20px 40px 20px;
+  padding: 0 20px 40px 0px;
   align-items: center;
 }
 
@@ -56,16 +62,9 @@
   cursor: pointer;
 }
 
-/* TODO: get hover animation working with images of different aspect ratios */
-/* .thumbnail {
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.portraitLabel {
+  margin-top: 15px;
 }
-
-.thumbnail:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-} */
 
 .portraitThumbnailContainer {
   height: 50vh;
@@ -80,10 +79,12 @@
     box-shadow 0.3s ease;
 }
 
-/* .portraitThumbnailContainer:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-} */
+@media (min-width: 993px) {
+  .portraitThumbnailContainer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+}
 
 .portraitLabelText:hover {
   text-decoration: underline;

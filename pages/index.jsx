@@ -2,8 +2,12 @@ import styles from "./Home.module.css";
 import Wordmark from "./Components/Wordmark";
 import HeaderBar from "./Components/HeaderBar";
 import VideoWithToolbar from "./Components/VideoWithToolbar";
+import { useMediaQuery } from "react-responsive";
 
 export default function Home() {
+  const isXsScreen = useMediaQuery({ maxWidth: 500 });
+  const isGalaxyFold = useMediaQuery({ maxWidth: 340 });
+
   return (
     <>
       <div className={styles.videoPlayer}>
@@ -13,8 +17,28 @@ export default function Home() {
       <div className={`contentContainer`}>
         <div className="row">
           <div className="col">
-            {/* TODO: make wordmark responsive */}
-            <Wordmark color={"black"} width={"500px"} />
+            <div className={`d-none d-lg-flex`}>
+                <Wordmark
+                  color={"var(--temptress)"}
+                  width={"500px"}
+                  style={{ zIndex: "10" }}
+                />
+            </div>
+            <div className={`d-lg-none`}>
+              {isXsScreen ? (
+                  <Wordmark
+                    color={"var(--temptress)"}
+                    width={isGalaxyFold ? "200px" : "275px"}
+                    style={{ zIndex: "10" }}
+                  />
+              ) : (
+                  <Wordmark
+                    color={"var(--temptress)"}
+                    width={"400px"}
+                    style={{ zIndex: "10" }}
+                  />
+              )}
+            </div>
             <p style={{ marginTop: "10px" }}>
               The Movement Undercommons explores human movement vernaculars -
               everyday narratives, songs, and bodies – through the gathering and
@@ -59,6 +83,19 @@ export default function Home() {
       />
 
       <div className={`contentContainer`}>
+        <div className={`row d-block d-lg-none`} style={{ margin: "30px 20px 0 20px" }}>
+          <h1
+            className={`abolitionRegular col-lg-2 col-12`}
+            style={{
+              alignSelf: "flex-start",
+              paddingRight: "20px",
+              marginBottom: "30px",
+              color: "var(--temptress)",
+            }}
+          >
+            FUNDERS
+          </h1>
+        </div>
         <div
           className={`d-flex justify-content-around align-items-center flex-wrap`}
         >
@@ -92,8 +129,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={`row`} style={{ margin: "30px 20px 0 20px" }}>
-          <div className="d-none d-lg-block col" />
+        <div className={`row d-none d-lg-flex`} style={{ margin: "30px 20px 0 20px" }}>
+          <div className="col" />
           <h1
             className={`abolitionRegular col-lg-2 col-12`}
             style={{
