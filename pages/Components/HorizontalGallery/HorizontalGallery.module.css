@@ -1,0 +1,55 @@
+.galleryContainer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px 0;
+}
+
+.gallery {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.nonScrollGallery {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 50px;
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.galleryItemContainer {
+    scroll-snap-align: start;
+}
+
+.galleryItem {
+    flex: 0 1 auto;
+    transition: transform 0.3s ease;
+}
+
+.boxShadow {
+    box-shadow: 6px 4px 8px rgba(0, 0, 0, 1);
+}
+
+.galleryButton {
+    color: black;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.galleryButton.left {
+    left: 0;
+}
+
+.galleryButton.right {
+    right: 0;
+}

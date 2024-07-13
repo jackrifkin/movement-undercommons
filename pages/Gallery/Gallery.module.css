@@ -10,6 +10,11 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  scrollbar-width: none;
+}
+
+.filterContainer::-webkit-scrollbar {
+  display: none;
 }
 
 @media (max-width: 992px) {
