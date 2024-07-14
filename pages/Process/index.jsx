@@ -2,8 +2,8 @@ import Image from "next/image";
 import HeaderBar from "../Components/HeaderBar";
 import styles from "./Process.module.css";
 import HorizontalGallery from "../Components/HorizontalGallery";
-import publications from '../../temp_data/publications.json';
-import press from '../../temp_data/press.json';
+import publications from "../../temp_data/publications.json";
+import press from "../../temp_data/press.json";
 
 export default function Process() {
   return (
@@ -432,17 +432,31 @@ export default function Process() {
         alignTextLeft={true}
       />
 
-      <div style={{padding: '40px 10px'}}>
-        <HorizontalGallery hasShadows defaultItemWidth={300} itemHeightFactor={1.333} items={publications.map((publication) => {
-          return (
-            <a className={styles.publicationContainer} href={`/movement-undercommons/Publications/${publication.filePath}`} target="_blank">
-              <img src={`/movement-undercommons/Publications/Thumbnails/${publication.thumbnail}`} style={{width: '100%', height: 'auto', maxHeight: '100%'}}/>
-              <div className={styles.publicationCitation}>
-                <p className={`${styles.publicationCitationText} altText`}>{publication.citation}</p>
-              </div>
-            </a>
-          )
-        })}/>
+      <div style={{ padding: "40px 10px" }}>
+        <HorizontalGallery
+          hasShadows
+          defaultItemWidth={300}
+          itemHeightFactor={1.333}
+          items={publications.map((publication) => {
+            return (
+              <a
+                className={styles.publicationContainer}
+                href={`/movement-undercommons/Publications/${publication.filePath}`}
+                target="_blank"
+              >
+                <img
+                  src={`/movement-undercommons/Publications/Thumbnails/${publication.thumbnail}`}
+                  style={{ width: "100%", height: "auto", maxHeight: "100%" }}
+                />
+                <div className={styles.publicationCitation}>
+                  <p className={`${styles.publicationCitationText} altText`}>
+                    {publication.citation}
+                  </p>
+                </div>
+              </a>
+            );
+          })}
+        />
       </div>
 
       <HeaderBar
@@ -453,15 +467,24 @@ export default function Process() {
         alignTextLeft={true}
       />
 
-      <div style={{padding: '40px 10px'}}>
-        <HorizontalGallery defaultItemWidth={400} itemHeightFactor={0} items={press.map((item) => {
-          return (
-            <a href={item.link} target="_blank">
-              <img src={`/movement-undercommons/Press/${item.thumbnail}`} style={{width: '100%', height: 'auto'}}/>
-              <h3 className={`${styles.pressTitle} abolitionRegular`}>{item.title}</h3>
-            </a>
-          )
-        })}/>
+      <div style={{ padding: "40px 10px" }}>
+        <HorizontalGallery
+          defaultItemWidth={400}
+          itemHeightFactor={0}
+          items={press.map((item) => {
+            return (
+              <a href={item.link} target="_blank">
+                <img
+                  src={`/movement-undercommons/Press/${item.thumbnail}`}
+                  style={{ width: "100%", height: "auto" }}
+                />
+                <h3 className={`${styles.pressTitle} abolitionRegular`}>
+                  {item.title}
+                </h3>
+              </a>
+            );
+          })}
+        />
       </div>
     </>
   );
