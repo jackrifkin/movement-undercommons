@@ -72,7 +72,7 @@ export default function HorizontalGallery({
         className={canScroll ? styles.gallery : styles.nonScrollGallery}
         ref={galleryRef}
       >
-        {items.map((item, index) => {
+        {items && items.map((item, index) => {
           const width = itemWidth != 0 ? itemWidth : defaultItemWidth;
           const height =
             itemHeightFactor == 0 ? "auto" : `${width * itemHeightFactor}px`;
