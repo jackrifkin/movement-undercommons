@@ -61,11 +61,11 @@ export default function HorizontalGallery({items, hasShadows, defaultItemWidth, 
         <div className={canScroll ? styles.gallery : styles.nonScrollGallery} ref={galleryRef}>
           {items.map((item, index) => {
             const width = itemWidth != 0 ? itemWidth : defaultItemWidth;
-            const height = width * itemHeightFactor;
+            const height = itemHeightFactor == 0 ? 'auto' : `${width * itemHeightFactor}px`;
 
             return (
                 <div key={index} className={styles.galleryItemContainer} style={isCenterAligned ? {padding: `10px ${itemMargin}px`} : {padding: '10px 50px 10px 0px'}}>
-                    <div key={index} className={`${styles.galleryItem} ${hasShadows ? styles.boxShadow : ''}`} style={{width: `${width}px`, height: `${height}px`}}>
+                    <div key={index} className={`${styles.galleryItem} ${hasShadows ? styles.boxShadow : ''}`} style={{width: `${width}px`, height: `${height}`}}>
                         {item}
                     </div>
                 </div>

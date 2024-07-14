@@ -32,6 +32,8 @@
 .galleryItem {
     flex: 0 1 auto;
     transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
 }
 
 .boxShadow {

@@ -435,12 +435,12 @@ export default function Process() {
       <div style={{padding: '40px 10px'}}>
         <HorizontalGallery hasShadows defaultItemWidth={300} itemHeightFactor={1.333} items={publications.map((publication) => {
           return (
-            <div className={styles.publicationContainer}>
-              <img src={`/Publications/Thumbnails/${publication.thumbnail}`} style={{width: '100%', height: 'auto', maxHeight: '100%'}}/>
+            <a className={styles.publicationContainer} href={`/movement-undercommons/Publications/${publication.filePath}`} target="_blank">
+              <img src={`/movement-undercommons/Publications/Thumbnails/${publication.thumbnail}`} style={{width: '100%', height: 'auto', maxHeight: '100%'}}/>
               <div className={styles.publicationCitation}>
                 <p className={`${styles.publicationCitationText} altText`}>{publication.citation}</p>
               </div>
-            </div>
+            </a>
           )
         })}/>
       </div>
@@ -454,8 +454,13 @@ export default function Process() {
       />
 
       <div style={{padding: '40px 10px'}}>
-        <HorizontalGallery hasShadows defaultItemWidth={300} items={press.map((item) => {
-
+        <HorizontalGallery defaultItemWidth={400} itemHeightFactor={0} items={press.map((item) => {
+          return (
+            <a href={item.link} target="_blank">
+              <img src={`/movement-undercommons/Press/${item.thumbnail}`} style={{width: '100%', height: 'auto'}}/>
+              <h3 className={`${styles.pressTitle} abolitionRegular`}>{item.title}</h3>
+            </a>
+          )
         })}/>
       </div>
     </>

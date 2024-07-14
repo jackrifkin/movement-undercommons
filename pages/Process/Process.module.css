@@ -7,13 +7,6 @@
   margin-top: 50px;
 }
 
-@media (max-width: 992px) {
-  .altText {
-    margin-left: -12px;
-    margin-top: 15px;
-  }
-}
-
 .publicationCitation {
   position: absolute;
   bottom: 0;
@@ -21,11 +14,12 @@
   width: 100%;
   height: auto; 
   background-color: rgba(0, 0, 0, 0.5);
-  color: grey;
+  color: rgb(220, 220, 220);
   opacity: 0;
   transition: opacity 0.3s;
   z-index: 10;
   padding: 15px;
+  padding-bottom: 0;
 }
 
 .publicationContainer {
@@ -37,4 +31,20 @@
 
 .publicationContainer:hover .publicationCitation {
   opacity: 1;
+}
+
+.pressTitle {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 992px) {
+  .altText {
+    margin-left: -12px;
+    margin-top: 15px;
+  }
+
+  .publicationCitation {
+    opacity: 1;
+  }
 }
