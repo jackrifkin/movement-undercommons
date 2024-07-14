@@ -104,7 +104,7 @@ export default function HorizontalGallery({
           onClick={() => scroll("right")}
           style={{ paddingLeft: "15px" }}
         >
-          <Image src={"/movment-undercommons/chevronRight.png"} width={25} height={75} />
+          <Image src={"/movement-undercommons/chevronRight.png"} width={25} height={75} />
         </button>
       )}
     </div>
