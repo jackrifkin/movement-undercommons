@@ -40,12 +40,12 @@ const VideoWithToolbar = ({ src, loops = true, hasToolbar = true }) => {
     } else {
       document.exitFullscreen();
     }
-    setIsFullscreen(!isFullscreen)
+    setIsFullscreen(!isFullscreen);
   };
 
   const handleFullScreenChange = () => {
     if (!document.fullscreenElement) {
-      setIsFullscreen(false)
+      setIsFullscreen(false);
       videoRef.current.playsInline = true;
       calculateVideoDimensions();
     }
@@ -74,7 +74,7 @@ const VideoWithToolbar = ({ src, loops = true, hasToolbar = true }) => {
   useEffect(() => {
     const videoElement = videoRef.current;
     if (videoElement) {
-      setIsMuted(videoElement.muted)
+      setIsMuted(videoElement.muted);
       videoElement.addEventListener("loadedmetadata", calculateVideoDimensions);
       window.addEventListener("resize", calculateVideoDimensions);
       document.addEventListener("fullscreenchange", handleFullScreenChange);
@@ -87,14 +87,17 @@ const VideoWithToolbar = ({ src, loops = true, hasToolbar = true }) => {
           calculateVideoDimensions,
         );
         window.removeEventListener("resize", calculateVideoDimensions);
-        document.removeEventListener("fullscreenchange", handleFullScreenChange)
+        document.removeEventListener(
+          "fullscreenchange",
+          handleFullScreenChange,
+        );
       };
     }
   }, [src]);
 
   useEffect(() => {
     setIsMobile(isMobileQuery);
-  }, [isMobileQuery])
+  }, [isMobileQuery]);
 
   return (
     <div className={styles.videoContainer}>
@@ -143,13 +146,15 @@ const VideoWithToolbar = ({ src, loops = true, hasToolbar = true }) => {
             height={38}
             onClick={toggleMute}
           />
-          {!isMobile && <Image
-            className={styles.icon}
-            src={"/movement-undercommons/Full Screen.svg"}
-            width={38}
-            height={38}
-            onClick={toggleFullscreen}
-          />}
+          {!isMobile && (
+            <Image
+              className={styles.icon}
+              src={"/movement-undercommons/Full Screen.svg"}
+              width={38}
+              height={38}
+              onClick={toggleFullscreen}
+            />
+          )}
         </div>
       )}
     </div>

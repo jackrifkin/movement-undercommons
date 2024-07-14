@@ -6,18 +6,18 @@ import { useMediaQuery } from "react-responsive";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [isXsScreen, setIsXsScreen] = useState(false)
-  const [isGalaxyFold, setIsGalaxyFold] = useState(false)
+  const [isXsScreen, setIsXsScreen] = useState(false);
+  const [isGalaxyFold, setIsGalaxyFold] = useState(false);
   const xsScreenQuery = useMediaQuery({ maxWidth: 500 });
   const galaxyFoldQuery = useMediaQuery({ maxWidth: 340 });
 
   useEffect(() => {
-    setIsXsScreen(xsScreenQuery)
-  }, [xsScreenQuery])
+    setIsXsScreen(xsScreenQuery);
+  }, [xsScreenQuery]);
 
   useEffect(() => {
-    setIsGalaxyFold(galaxyFoldQuery)
-  }, [galaxyFoldQuery])
+    setIsGalaxyFold(galaxyFoldQuery);
+  }, [galaxyFoldQuery]);
 
   return (
     <>

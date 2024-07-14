@@ -1,55 +1,9 @@
 import Image from "next/image";
 import HeaderBar from "../Components/HeaderBar";
 import styles from "./Process.module.css";
-
-const placeholderPublications = [
-  {
-    title: "Jacob's Pillow",
-    description: "A short film made by the Jacob's Pillow team",
-    link: "https://watch.jacobspillow.org/detail/videos/inside-the-pillow-lab/video/6340364188112?autoStart=true",
-  },
-  {
-    title: "Dance Magazine",
-    description: "Press from Dance Magazine",
-    link: "https://www.dancemagazine.com/choreo-robotics/",
-  },
-  {
-    title: "36 Walk: a case study of reciprocity in movement and computation",
-    description: "A case study paper by Grisha Coleman and Daragh Byrne",
-    link: "/movement-undercommons/Publications/36Walk.pdf",
-  },
-  {
-    title: "The Movement Undercommons",
-    description:
-      "Movement analysis as meaning making in a time of global migrations\nby Grisha Coleman",
-    link: "/movement-undercommons/Publications/MovementUndercommons.pdf",
-  },
-  {
-    title: "Motion, Captured",
-    description:
-      "An open repository for comparative movement studies\nby Grisha Coleman & Co.",
-    link: "/movement-undercommons/Publications/Motion, Captured.pdf",
-  },
-  {
-    title: "Decolonizing the Machine",
-    description:
-      "Decolonizing the Machine: Race, Gender, and Disability in Robots and Algorithmic Art\nby Grisha Coleman & Co.",
-    link: "/movement-undercommons/Publications/DECOLONIZING_THE_MACHINE.pdf",
-  },
-];
-
-const Publication = ({ title, description, link }) => {
-  return (
-    <div style={{ marginBottom: "30px" }}>
-      <h3 className="abolitionRegular" style={{ marginBottom: "0" }}>
-        <a className={styles.publicationLink} href={link} target="_blank">
-          {title}
-        </a>
-      </h3>
-      <p>{description}</p>
-    </div>
-  );
-};
+import HorizontalGallery from "../Components/HorizontalGallery";
+import publications from "../../temp_data/publications.json";
+import press from "../../temp_data/press.json";
 
 export default function Process() {
   return (
@@ -471,43 +425,66 @@ export default function Process() {
       </div>
 
       <HeaderBar
-        text="PUBLICATIONS AND PRESS"
+        text="PUBLICATIONS"
         backgroundColors={["var(--burnt-orange)"]}
         textColors={["var(--light-blue)"]}
         underlineColors={["var(--dark-teal)"]}
         alignTextLeft={true}
       />
 
-      <div className={`contentContainer`}>
-        <div className="row">
-          <div className="col-12 col-md-5">
-            {placeholderPublications
-              .slice(0, Math.ceil(placeholderPublications.length / 2))
-              .map((publication) => {
-                return (
-                  <Publication
-                    title={publication.title}
-                    description={publication.description}
-                    link={publication.link}
-                  />
-                );
-              })}
-          </div>
-          <div className="col-2" />
-          <div className="col-12 col-md-5">
-            {placeholderPublications
-              .slice(Math.ceil(placeholderPublications.length / 2))
-              .map((publication) => {
-                return (
-                  <Publication
-                    title={publication.title}
-                    description={publication.description}
-                    link={publication.link}
-                  />
-                );
-              })}
-          </div>
-        </div>
+      <div style={{ padding: "40px 10px" }}>
+        <HorizontalGallery
+          hasShadows
+          defaultItemWidth={300}
+          itemHeightFactor={1.333}
+          items={publications.map((publication) => {
+            return (
+              <a
+                className={styles.publicationContainer}
+                href={`/movement-undercommons/Publications/${publication.filePath}`}
+                target="_blank"
+              >
+                <img
+                  src={`/movement-undercommons/Publications/Thumbnails/${publication.thumbnail}`}
+                  style={{ width: "100%", height: "auto", maxHeight: "100%" }}
+                />
+                <div className={styles.publicationCitation}>
+                  <p className={`${styles.publicationCitationText} altText`}>
+                    {publication.citation}
+                  </p>
+                </div>
+              </a>
+            );
+          })}
+        />
+      </div>
+
+      <HeaderBar
+        text="PRESS"
+        backgroundColors={["var(--burnt-orange)"]}
+        textColors={["var(--light-blue)"]}
+        underlineColors={["var(--dark-teal)"]}
+        alignTextLeft={true}
+      />
+
+      <div style={{ padding: "40px 10px" }}>
+        <HorizontalGallery
+          defaultItemWidth={400}
+          itemHeightFactor={0}
+          items={press.map((item) => {
+            return (
+              <a href={item.link} target="_blank">
+                <img
+                  src={`/movement-undercommons/Press/${item.thumbnail}`}
+                  style={{ width: "100%", height: "auto" }}
+                />
+                <h3 className={`${styles.pressTitle} abolitionRegular`}>
+                  {item.title}
+                </h3>
+              </a>
+            );
+          })}
+        />
       </div>
     </>
   );
