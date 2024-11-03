@@ -1,0 +1,100 @@
+[
+  {
+    "subTeamName": "Key Collaborators",
+    "members": [
+      {
+        "name": "Grisha Coleman",
+        "role": "Principle Investigator & Aritstic Director",
+        "link": "https://search.asu.edu/profile/1301121",
+        "linkCopy": "ASU faculty"
+      },
+      {
+        "name": "Shawn Lawson",
+        "role": "Animation Artist",
+        "link": "https://search.asu.edu/profile/1301121",
+        "linkCopy": "ASU faculty"
+      },
+      {
+        "name": "Michael Krzyzaniak",
+        "role": "Sound & Data Design",
+        "link": null,
+        "linkCopy": null
+      }
+    ]
+  },
+  {
+    "subTeamName": "Arizona",
+    "members": [
+      {
+        "name": "Melissa Cliver",
+        "role": "Design Strategist",
+        "link": null,
+        "linkCopy": null
+      },
+      {
+        "name": "Jiaying Brust",
+        "role": "Creative Technologist",
+        "link": null,
+        "linkCopy": null
+      },
+      {
+        "name": "Zakiya Johnson",
+        "role": "Communications & Documentation",
+        "link": null,
+        "linkCopy": null
+      },
+      {
+        "name": "Lavendar Sy",
+        "role": "Audio & Production",
+        "link": null,
+        "linkCopy": null
+      },
+      {
+        "name": "Tejaswi Gowda",
+        "role": "Software Developer",
+        "link": "https://search.asu.edu/profile/1301121",
+        "linkCopy": "ASU faculty"
+      },
+      {
+        "name": "Assegid Kidane",
+        "role": "Electrical Engineer",
+        "link": "https://search.asu.edu/profile/1301121",
+        "linkCopy": "ASU faculty"
+      }
+    ]
+  },
+  {
+    "subTeamName": "Harvard Radcliffe",
+    "members": [
+      {
+        "name": "Autumn Dorsey",
+        "role": null,
+        "link": null,
+        "linkCopy": null
+      },
+      {
+        "name": "Lily Cunningham",
+        "role": null,
+        "link": null,
+        "linkCopy": null
+      }
+    ]
+  },
+  {
+    "subTeamName": "Additional Consultants",
+    "members": [
+      {
+        "name": "Celeste Martore",
+        "role": "3D Animation",
+        "link": null,
+        "linkCopy": null
+      },
+      {
+        "name": "Val Jeanty",
+        "role": "Sound Composition",
+        "link": null,
+        "linkCopy": null
+      }
+    ]
+  }
+]

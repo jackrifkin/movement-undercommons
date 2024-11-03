@@ -1,0 +1,38 @@
+.container {
+  height: 130px;
+  background-color: var(--light-maize);
+  position: relative;
+}
+
+.mobileContainer {
+  height: 210px;
+  background-color: var(--light-maize);
+  position: relative;
+  border-top: 1px solid var(--temptress);
+}
+
+.mobileLabelsContainer {
+  height: 160px;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.mobileFailspaceContainer {
+  height: 50px;
+  background-color: var(--temptress);
+}
+
+.hoverFooterContainer {
+  background-color: var(--black-coffee);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  position: relative;
+}
+
+.hoverFooterFlexContainer {
+  border-top: 3px solid var(--light-maize);
+  height: 130px;
+  width: 100%;
+  padding: 15px 0;
+  position: absolute;
+  top: -130px;
+}

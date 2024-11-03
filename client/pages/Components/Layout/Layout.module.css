@@ -1,0 +1,10 @@
+.layoutWrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.layoutContent {
+  flex: 1;
+  background-color: var(--cosmic-latte);
+}

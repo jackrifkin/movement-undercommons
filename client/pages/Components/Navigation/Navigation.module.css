@@ -1,0 +1,121 @@
+.container {
+  height: 130px;
+  background-color: var(--temptress);
+  clip-path: polygon(0 0, 100% 0, 100% 130px, 0 130px);
+}
+
+.flexContainer {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.flexContainerMobile {
+  height: 130px;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.hoverFlexContainer {
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  height: 130px;
+  width: 100%;
+  background-color: var(--maize);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  z-index: 11;
+}
+
+.wordmarkContainer,
+.wordmarkContainerMobile {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wordmarkContainerMobile {
+  margin-left: 10px;
+  padding-bottom: 20px;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.menuLabelContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 7.5px;
+}
+
+.hoverMenuTextContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-bottom: 7.5px;
+  justify-content: space-between;
+}
+
+.menuLabel {
+  color: var(--cosmic-latte);
+  font-size: xx-large;
+  margin-right: 50px;
+}
+
+.hoverMenuText {
+  color: var(--temptress);
+  font-size: xx-large;
+  text-decoration: none;
+}
+
+.hoverMenuText:hover {
+  text-decoration: underline;
+}
+
+.expandedMenuMobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: var(--maize);
+  transition: height 0.35s ease-in-out;
+  z-index: 100000;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.expandedMenuContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+}
+
+.expandedMenuLabelsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: calc(100% - 130px);
+  padding-bottom: 50px;
+}
+
+.expandedMenuMobile.visible {
+  height: 100vh;
+}
+
+.expandedMenuText {
+  color: var(--cosmic-latte);
+  font-size: xx-large;
+}
+
+.expandedMenuText:hover {
+  text-decoration: underline;
+}

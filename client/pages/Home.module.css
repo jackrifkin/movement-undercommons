@@ -1,0 +1,14 @@
+.videoPlayer {
+  height: calc(100vh - 130px);
+  position: relative;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.logoContainer {
+  margin: 20px;
+}
