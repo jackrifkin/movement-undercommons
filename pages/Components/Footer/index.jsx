@@ -107,6 +107,7 @@ export default function Footer() {
             src="/movement-undercommons/FAILSPACE_logo.png"
             width={25}
             height={25}
+            alt="FAILSPACE NYC logo"
           />
         </div>
         <HoverFooter

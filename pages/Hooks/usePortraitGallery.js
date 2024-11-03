@@ -4,7 +4,7 @@ import portraits from "./../../temp_data/portraits.json";
 
 const PORTRAITS_PER_PAGE = 12;
 
-export default function usePortraitGallery() {
+const usePortraitGallery = () => {
   const [hasMultiplePages, setHasMultiplePages] = useState(false);
   const [currentFilters, setCurrentFilters] = useState([]);
   const [currentPortraits, setCurrentPortraits] = useState(portraits);
@@ -29,10 +29,8 @@ export default function usePortraitGallery() {
   };
 
   const isPortraitVisible = (portrait) => {
-    return currentFilters.every((filter) =>
-      portrait.filters?.includes(filter),
-    );
-  }
+    return currentFilters.every((filter) => portrait.filters?.includes(filter));
+  };
 
   const handleFilterSelect = (filter) => {
     if (isFilterSelected(filter)) {
@@ -42,5 +40,13 @@ export default function usePortraitGallery() {
     }
   };
 
-  return { hasMultiplePages, currentPortraits, handleFilterSelect, isFilterSelected, isPortraitVisible }
-}
+  return [
+    hasMultiplePages,
+    currentPortraits,
+    handleFilterSelect,
+    isFilterSelected,
+    isPortraitVisible,
+  ];
+};
+
+export default usePortraitGallery;

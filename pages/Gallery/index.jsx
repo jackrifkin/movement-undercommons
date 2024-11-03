@@ -23,7 +23,13 @@ const Thumbnail = ({ filePath, id }) => {
 };
 
 export default function Gallery() {
-  const { hasMultiplePages, currentPortraits, handleFilterSelect, isFilterSelected, isPortraitVisible } = usePortraitGallery();
+  const [
+    hasMultiplePages,
+    currentPortraits,
+    handleFilterSelect,
+    isFilterSelected,
+    isPortraitVisible,
+  ] = usePortraitGallery();
   const router = useRouter();
 
   const GalleryNav = () => {
@@ -35,8 +41,9 @@ export default function Gallery() {
       {hasMultiplePages && <GalleryNav />}
       <div className={`${styles.filterContainer}`}>
         <h5 className={`${styles.filterLabel} abolitionRegular`}>Filter</h5>
-        {filters.map((filter) => (
+        {filters.map((filter, key) => (
           <div
+            key={key}
             className={styles.filterButton}
             onClick={(_e) => handleFilterSelect(filter)}
             style={
@@ -65,6 +72,7 @@ export default function Gallery() {
           return (
             isVisible && (
               <div
+                key={index}
                 className={`${styles.portraitContainer} col-12 col-md-6 col-xl-4`}
               >
                 <div
@@ -77,7 +85,7 @@ export default function Gallery() {
                     filePath={`/Thumbnails${portrait.thumbnailFilePath}`}
                   />
                 </div>
-                <h3 className={`${styles.portraitLabel} abolitionRegular`} >
+                <h3 className={`${styles.portraitLabel} abolitionRegular`}>
                   <span
                     onClick={handleClick}
                     className={styles.portraitLabelText}
@@ -92,18 +100,18 @@ export default function Gallery() {
           );
         })}
         {currentPortraits.every((portrait) => !isPortraitVisible(portrait)) && (
-            <div
-              className={`d-flex justify-content-center`}
-              style={{ width: "100%" }}
+          <div
+            className={`d-flex justify-content-center`}
+            style={{ width: "100%" }}
+          >
+            <h2
+              className={`abolitionRegular text-center`}
+              style={{ whiteSpace: "pre-line", lineHeight: "1.5" }}
             >
-              <h2
-                className={`abolitionRegular text-center`}
-                style={{ whiteSpace: "pre-line", lineHeight: "1.5" }}
-              >
-                {NO_MATCHING_FILTERS_MESSAGE}
-              </h2>
-            </div>
-          )}
+              {NO_MATCHING_FILTERS_MESSAGE}
+            </h2>
+          </div>
+        )}
       </div>
     </>
   );

@@ -447,6 +447,7 @@ export default function Process() {
                 <img
                   src={`/movement-undercommons/Publications/Thumbnails/${publication.thumbnail}`}
                   style={{ width: "100%", height: "auto", maxHeight: "100%" }}
+                  alt={publication.filePath}
                 />
                 <div className={styles.publicationCitation}>
                   <p className={`${styles.publicationCitationText} altText`}>
@@ -477,6 +478,7 @@ export default function Process() {
                 <img
                   src={`/movement-undercommons/Press/${item.thumbnail}`}
                   style={{ width: "100%", height: "auto" }}
+                  alt={item.link}
                 />
                 <h3 className={`${styles.pressTitle} abolitionRegular`}>
                   {item.title}
