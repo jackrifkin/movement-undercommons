@@ -82,7 +82,7 @@ export default function Gallery() {
                 >
                   <Thumbnail
                     id={`thumbnail_${index}`}
-                    filePath={`/Thumbnails${portrait.thumbnailFilePath}`}
+                    filePath={`/movement-undercommons/Thumbnails${portrait.thumbnailFilePath}`}
                   />
                 </div>
                 <h3 className={`${styles.portraitLabel} abolitionRegular`}>
