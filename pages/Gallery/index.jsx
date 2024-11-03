@@ -1,7 +1,7 @@
 import styles from "./Gallery.module.css";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import usePortraitGallery from "../Hooks/usePortraitGallery";
+import usePortraitGallery from "../../hooks/usePortraitGallery";
 
 // TODO: fetched from db (?)
 const filters = ["Poetic", "Mundane", "Labor", "Functional", "Virtuosic"];

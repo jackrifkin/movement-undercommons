@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 // TODO: should be fetched from db + stored in redux store
-import portraits from "./../../temp_data/portraits.json";
+import portraits from "../temp_data/portraits.json";
 
 const PORTRAITS_PER_PAGE = 12;
 
